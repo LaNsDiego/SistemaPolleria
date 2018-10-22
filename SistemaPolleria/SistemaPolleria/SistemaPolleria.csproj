@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Entidad\ClsCargo.cs" />
     <Compile Include="Entidad\ClsCompra.cs" />
+    <Compile Include="Entidad\ClsDetalleCompra.cs" />
     <Compile Include="Entidad\ClsDetallePlato.cs" />
     <Compile Include="Entidad\ClsEmpleado.cs" />
     <Compile Include="Entidad\ClsDetallePedido.cs" />
