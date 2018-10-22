@@ -11,7 +11,7 @@ namespace SistemaPolleria.Entidad
         public int Id { get; private set; }
         public int CompraId { get; private set; }
         public int IngredienteId { get; private set; }
-        public double PrecioUnitario { get; private set; }
+        public double PrecioUnitario { get; private set; }//viene con IGV
         public int Cantidad { get; private set; }
         public int Subtotal { get; private set; }
     }

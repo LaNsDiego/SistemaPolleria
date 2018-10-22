@@ -56,6 +56,7 @@
     <Compile Include="Entidad\ClsMesa.cs" />
     <Compile Include="Entidad\ClsPedido.cs" />
     <Compile Include="Entidad\ClsPlato.cs" />
+    <Compile Include="Entidad\ClsProveedor.cs" />
     <Compile Include="Negocio\ClsNConexion.cs" />
     <Compile Include="Ayuda\ClsNConvertidor.cs" />
     <Compile Include="Negocio\ClsNPedido.cs" />

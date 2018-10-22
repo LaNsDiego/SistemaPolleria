@@ -12,6 +12,5 @@ namespace SistemaPolleria.Entidad
         public string Nombre { get; private set; }
         public int Cantidad { get; private set; }
         public int PrecioUnitario { get; private set; }
-
     }
 }
