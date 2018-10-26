@@ -64,11 +64,35 @@
     <Compile Include="Ayuda\ClsNRequerido.cs" />
     <Compile Include="Ayuda\ClsNSQLParametro.cs" />
     <Compile Include="Ayuda\ClsNUI.cs" />
+    <Compile Include="Presentacion\FrmCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmCompra.Designer.cs">
+      <DependentUpon>FrmCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmKardex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmKardex.Designer.cs">
+      <DependentUpon>FrmKardex.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmMesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmMesa.Designer.cs">
+      <DependentUpon>FrmMesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmPedidoMesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmPedidoMesa.Designer.cs">
+      <DependentUpon>FrmPedidoMesa.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\FrmPrincipalMoso.cs">
       <SubType>Form</SubType>
@@ -84,8 +108,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\FrmCompra.resx">
+      <DependentUpon>FrmCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmKardex.resx">
+      <DependentUpon>FrmKardex.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmMesa.resx">
+      <DependentUpon>FrmMesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmPedidoMesa.resx">
+      <DependentUpon>FrmPedidoMesa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmPrincipalMoso.resx">
       <DependentUpon>FrmPrincipalMoso.cs</DependentUpon>
