@@ -12,12 +12,13 @@ namespace SistemaPolleria.Entidad
         public int ProveedorId { get; private set; }
         public int EmpleadoId { get; private set; }
         public DateTime FechaRegistro { get; private set; }
-        public int FechaEmision;
+        public int ComprobanteId { get; private set; }
         public int TipoComprobante;
-        public int Serie;
-        public int Numero;
-        public int Estado;
-        public int Observacion;
+        //public int FechaEmision;
+        //public int Serie;
+        //public int Numero;
+        //public int Estado;
+        //public int Observacion;
         public int Total { get; private set; }
     }
 }
