@@ -1,6 +1,6 @@
 ﻿namespace SistemaPolleria.Presentacion
 {
-    partial class FrmPrincipalMoso
+    partial class FrmPrincipalAdministrador
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipalMoso));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipalAdministrador));
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,7 +61,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 700);
-            this.panel3.TabIndex = 3;
+            this.panel3.TabIndex = 4;
             // 
             // panel2
             // 
@@ -92,9 +92,9 @@
             this.LblNivelUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(125)))), ((int)(((byte)(139)))));
             this.LblNivelUsuario.Location = new System.Drawing.Point(82, 12);
             this.LblNivelUsuario.Name = "LblNivelUsuario";
-            this.LblNivelUsuario.Size = new System.Drawing.Size(44, 19);
+            this.LblNivelUsuario.Size = new System.Drawing.Size(100, 19);
             this.LblNivelUsuario.TabIndex = 0;
-            this.LblNivelUsuario.Text = "Moso";
+            this.LblNivelUsuario.Text = "Administrador";
             // 
             // PtbFoto
             // 
@@ -226,16 +226,15 @@
             this.BtnCargo.Text = "Cargo";
             this.BtnCargo.UseVisualStyleBackColor = false;
             // 
-            // FrmPrincipalMoso
+            // FrmPrincipalAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(935, 700);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmPrincipalMoso";
-            this.Text = "FrmPrincipalMoso";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Name = "FrmPrincipalAdministrador";
+            this.Text = "FrmPrincipalAdministrador";
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -247,6 +246,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblNivelUsuario;
+        private System.Windows.Forms.PictureBox PtbFoto;
         private System.Windows.Forms.Button BtnListaBoleta;
         private System.Windows.Forms.Button BtnAlumno;
         private System.Windows.Forms.Button button1;
@@ -254,9 +257,5 @@
         private System.Windows.Forms.Button BtnEmpleado;
         private System.Windows.Forms.Button BtnBoleta;
         private System.Windows.Forms.Button BtnCargo;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label LblNivelUsuario;
-        private System.Windows.Forms.PictureBox PtbFoto;
     }
 }

@@ -11,7 +11,7 @@ namespace SistemaPolleria.Negocio
 {
     public abstract class ClsNConexion
     {
-        private static readonly string conex = "Server=Asus-Laptop\\SQLEXPRESS2017;Database=VENTAS;UID=sa;Pwd=yatusabespancho";
+        private static readonly string conex = "Server=.\\SQLEXPRESS2017;Database=POLLERIA;Integrated Security=true";
         private static SqlConnection conexion = new SqlConnection(conex);
         private ClsNConexion()
         {

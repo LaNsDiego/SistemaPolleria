@@ -58,12 +58,15 @@
     <Compile Include="Entidad\ClsPedido.cs" />
     <Compile Include="Entidad\ClsPlato.cs" />
     <Compile Include="Entidad\ClsProveedor.cs" />
+    <Compile Include="Entidad\ClsUsuario.cs" />
     <Compile Include="Negocio\ClsNConexion.cs" />
     <Compile Include="Ayuda\ClsNConvertidor.cs" />
+    <Compile Include="Negocio\ClsNEmpleado.cs" />
     <Compile Include="Negocio\ClsNPedido.cs" />
     <Compile Include="Ayuda\ClsNRequerido.cs" />
     <Compile Include="Ayuda\ClsNSQLParametro.cs" />
     <Compile Include="Ayuda\ClsNUI.cs" />
+    <Compile Include="Negocio\ClsNUsuario.cs" />
     <Compile Include="Presentacion\FrmCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +97,12 @@
     <Compile Include="Presentacion\FrmPedidoMesa.Designer.cs">
       <DependentUpon>FrmPedidoMesa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FrmPrincipalAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmPrincipalAdministrador.Designer.cs">
+      <DependentUpon>FrmPrincipalAdministrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmPrincipalMoso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmPedidoMesa.resx">
       <DependentUpon>FrmPedidoMesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmPrincipalAdministrador.resx">
+      <DependentUpon>FrmPrincipalAdministrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmPrincipalMoso.resx">
       <DependentUpon>FrmPrincipalMoso.cs</DependentUpon>
