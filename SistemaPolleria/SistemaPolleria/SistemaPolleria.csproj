@@ -75,11 +75,23 @@
     <Compile Include="Negocio\ClsNTipoProducto.cs" />
     <Compile Include="Negocio\ClsNUnidadMedida.cs" />
     <Compile Include="Negocio\ClsNUsuario.cs" />
+    <Compile Include="Presentacion\FrmAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmAsistencia.Designer.cs">
+      <DependentUpon>FrmAsistencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmBoleta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\FrmBoleta.Designer.cs">
       <DependentUpon>FrmBoleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmCargo.Designer.cs">
+      <DependentUpon>FrmCargo.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\FrmCompra.cs">
       <SubType>Form</SubType>
@@ -87,11 +99,23 @@
     <Compile Include="Presentacion\FrmCompra.Designer.cs">
       <DependentUpon>FrmCompra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FrmEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmEmpleado.Designer.cs">
+      <DependentUpon>FrmEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmInsumo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\FrmInsumo.Designer.cs">
       <DependentUpon>FrmInsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmInventario.Designer.cs">
+      <DependentUpon>FrmInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\FrmKardex.cs">
       <SubType>Form</SubType>
@@ -123,6 +147,12 @@
     <Compile Include="Presentacion\FrmPedidoMesa.Designer.cs">
       <DependentUpon>FrmPedidoMesa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FrmPlanilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmPlanilla.Designer.cs">
+      <DependentUpon>FrmPlanilla.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmPrincipalAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,16 +171,34 @@
     <Compile Include="Presentacion\FrmProducto.Designer.cs">
       <DependentUpon>FrmProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\FrmAsistencia.resx">
+      <DependentUpon>FrmAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmBoleta.resx">
       <DependentUpon>FrmBoleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmCargo.resx">
+      <DependentUpon>FrmCargo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmCompra.resx">
       <DependentUpon>FrmCompra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmEmpleado.resx">
+      <DependentUpon>FrmEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmInsumo.resx">
       <DependentUpon>FrmInsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmInventario.resx">
+      <DependentUpon>FrmInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmKardex.resx">
       <DependentUpon>FrmKardex.cs</DependentUpon>
@@ -167,6 +215,9 @@
     <EmbeddedResource Include="Presentacion\FrmPedidoMesa.resx">
       <DependentUpon>FrmPedidoMesa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmPlanilla.resx">
+      <DependentUpon>FrmPlanilla.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmPrincipalAdministrador.resx">
       <DependentUpon>FrmPrincipalAdministrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmProducto.resx">
       <DependentUpon>FrmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
