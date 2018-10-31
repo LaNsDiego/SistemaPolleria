@@ -1,4 +1,5 @@
-﻿using SistemaPolleria.Entidad;
+﻿using SistemaPolleria.Ayuda;
+using SistemaPolleria.Entidad;
 using SistemaPolleria.Negocio;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,15 @@ namespace SistemaPolleria.Presentacion
         }
 
         public List<int> TiposProducto = new List<int>();
+
+        private void AjustarControles(bool disponibilidad)
+        {
+            List<Control> Lista = new List<Control>
+            {
+               
+            };
+            ClsNUI.AjustarEstadoControles(Lista, disponibilidad);
+        }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
