@@ -47,31 +47,51 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidad\ClsCargo.cs" />
+    <Compile Include="Entidad\ClsCliente.cs" />
     <Compile Include="Entidad\ClsCompra.cs" />
     <Compile Include="Entidad\ClsDetalleCompra.cs" />
-    <Compile Include="Entidad\ClsDetallePlato.cs" />
+    <Compile Include="Entidad\ClsDetalleProducto.cs" />
     <Compile Include="Entidad\ClsEmpleado.cs" />
     <Compile Include="Entidad\ClsDetallePedido.cs" />
-    <Compile Include="Entidad\ClsIngrediente.cs" />
+    <Compile Include="Entidad\ClsInsumo.cs" />
     <Compile Include="Entidad\ClsKardex.cs" />
     <Compile Include="Entidad\ClsMesa.cs" />
     <Compile Include="Entidad\ClsPedido.cs" />
-    <Compile Include="Entidad\ClsPlato.cs" />
+    <Compile Include="Entidad\ClsProducto.cs" />
     <Compile Include="Entidad\ClsProveedor.cs" />
     <Compile Include="Entidad\ClsUsuario.cs" />
+    <Compile Include="Negocio\ClsNCliente.cs" />
     <Compile Include="Negocio\ClsNConexion.cs" />
     <Compile Include="Ayuda\ClsNConvertidor.cs" />
+    <Compile Include="Negocio\ClsNDetallePedido.cs" />
+    <Compile Include="Negocio\ClsNDetalleProducto.cs" />
     <Compile Include="Negocio\ClsNEmpleado.cs" />
+    <Compile Include="Negocio\ClsNInsumo.cs" />
     <Compile Include="Negocio\ClsNPedido.cs" />
     <Compile Include="Ayuda\ClsNRequerido.cs" />
     <Compile Include="Ayuda\ClsNSQLParametro.cs" />
     <Compile Include="Ayuda\ClsNUI.cs" />
+    <Compile Include="Negocio\ClsNProducto.cs" />
+    <Compile Include="Negocio\ClsNTipoProducto.cs" />
+    <Compile Include="Negocio\ClsNUnidadMedida.cs" />
     <Compile Include="Negocio\ClsNUsuario.cs" />
+    <Compile Include="Presentacion\FrmBoleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmBoleta.Designer.cs">
+      <DependentUpon>FrmBoleta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmCompra.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\FrmCompra.Designer.cs">
       <DependentUpon>FrmCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmInsumo.Designer.cs">
+      <DependentUpon>FrmInsumo.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\FrmKardex.cs">
       <SubType>Form</SubType>
@@ -90,6 +110,12 @@
     </Compile>
     <Compile Include="Presentacion\FrmMesa.Designer.cs">
       <DependentUpon>FrmMesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmPedido.Designer.cs">
+      <DependentUpon>FrmPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\FrmPedidoMesa.cs">
       <SubType>Form</SubType>
@@ -117,8 +143,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\FrmBoleta.resx">
+      <DependentUpon>FrmBoleta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmCompra.resx">
       <DependentUpon>FrmCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmInsumo.resx">
+      <DependentUpon>FrmInsumo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmKardex.resx">
       <DependentUpon>FrmKardex.cs</DependentUpon>
@@ -128,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmMesa.resx">
       <DependentUpon>FrmMesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmPedido.resx">
+      <DependentUpon>FrmPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmPedidoMesa.resx">
       <DependentUpon>FrmPedidoMesa.cs</DependentUpon>

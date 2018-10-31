@@ -48,7 +48,7 @@ namespace SistemaPolleria.Ayuda
             return cantidadEsperada == cantidadReal;
         }
 
-        public static bool AlfabeticoValido(string texto)
+        public static bool AlfabeticoValido(string texto,int CantidadEsperada = 0)
         {
             bool permitido = false;
             if (texto.Contains(" "))
@@ -72,7 +72,28 @@ namespace SistemaPolleria.Ayuda
                     Console.WriteLine("Alfabetico No valido : " + texto);
                 }
             }
-            return permitido;
+
+            return permitido ;
+        }
+
+
+        public static bool AlphaNumerico(string texto, int CantidadEsperada = 0)
+        {
+
+            bool LongitudOk = true;
+            bool AlphanumericoOk = true;
+
+
+            if (!Regex.IsMatch(texto, @"^^[a-zA-Z][a-zA-Z0-9]*$"))
+            {
+                Console.WriteLine("Alphanumerico No valido : " + texto);
+                AlphanumericoOk = false;
+            }
+            if (CantidadEsperada > 0)
+            {
+                LongitudOk = ClsNRequerido.LongitudValida(texto, CantidadEsperada);
+            }
+            return LongitudOk && AlphanumericoOk;
         }
 
     }

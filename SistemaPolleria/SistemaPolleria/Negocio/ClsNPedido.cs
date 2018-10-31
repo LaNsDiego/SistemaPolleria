@@ -11,50 +11,55 @@ namespace SistemaPolleria.Negocio
 {
     class ClsNPedido
     {
-        public static int Guardar(ClsPedido Pedido)
+        public static string Guardar(ClsPedido Pedido)
         {
             string Procedimiento = string.Empty;
             ClsNSQLParametro[] parametros;
 
-            if (Pedido.Id != 0)
+            if (Pedido.Id != string.Empty)
             {
-                Procedimiento = "SP_EDITAR_PEDIDO";
-                parametros = new ClsNSQLParametro[5];
-                parametros[0] = new ClsNSQLParametro(Pedido.Id, "@id", SqlDbType.Int);
-                parametros[1] = new ClsNSQLParametro(Pedido.MesaId, "@MesaId", SqlDbType.Int);
-                parametros[2] = new ClsNSQLParametro(Pedido.EmpleadoId, "@EmpleadoId", SqlDbType.Int);
-                parametros[3] = new ClsNSQLParametro(Pedido.Fecha, "@Fecha", SqlDbType.DateTime);
-                parametros[4] = new ClsNSQLParametro(Pedido.Total, "@Total", SqlDbType.Decimal);
+                Procedimiento = "ActualizarPedido";
+                parametros = new ClsNSQLParametro[7];
+                parametros[0] = new ClsNSQLParametro(Pedido.Id, "@Id", SqlDbType.VarChar);
+                parametros[1] = new ClsNSQLParametro(Pedido.IdCliente, "@IdCliente", SqlDbType.VarChar);
+                parametros[2] = new ClsNSQLParametro(Pedido.IdEmpleado, "@IdEmpleado", SqlDbType.VarChar);
+                parametros[3] = new ClsNSQLParametro(Pedido.TipoPedido, "@TipoPedido", SqlDbType.Bit);
+                parametros[4] = new ClsNSQLParametro(Pedido.FechaPedido, "@FechaPedido", SqlDbType.Date);
+                parametros[5] = new ClsNSQLParametro(Pedido.Total, "@Total", SqlDbType.Decimal);
+                parametros[6] = new ClsNSQLParametro(Pedido.Estado, "@Estado", SqlDbType.Int);
             }
             else
             {
-                Procedimiento = "SP_CREAR_PEDIDO";
-                parametros = new ClsNSQLParametro[4];
-                parametros[0] = new ClsNSQLParametro(Pedido.MesaId, "@MesaId", SqlDbType.Int);
-                parametros[1] = new ClsNSQLParametro(Pedido.EmpleadoId, "@EmpleadoId", SqlDbType.Int);
-                parametros[2] = new ClsNSQLParametro(Pedido.Fecha, "@Fecha", SqlDbType.DateTime);
-                parametros[3] = new ClsNSQLParametro(Pedido.Total, "@Total", SqlDbType.Decimal);
+                Procedimiento = "CrearPedido";
+                parametros = new ClsNSQLParametro[7];
+                parametros[0] = new ClsNSQLParametro(Pedido.Id, "@Id", SqlDbType.VarChar);
+                parametros[1] = new ClsNSQLParametro(Pedido.IdCliente, "@IdCliente", SqlDbType.VarChar);
+                parametros[2] = new ClsNSQLParametro(Pedido.IdEmpleado, "@IdEmpleado", SqlDbType.VarChar);
+                parametros[3] = new ClsNSQLParametro(Pedido.TipoPedido, "@TipoPedido", SqlDbType.Bit);
+                parametros[4] = new ClsNSQLParametro(Pedido.FechaPedido, "@FechaPedido", SqlDbType.Date);
+                parametros[5] = new ClsNSQLParametro(Pedido.Total, "@Total", SqlDbType.Decimal);
+                parametros[6] = new ClsNSQLParametro(Pedido.Estado, "@Estado", SqlDbType.Int);
             }
-            return Convert.ToInt32(ClsNConexion.EjecutarProcedimiento(Procedimiento, parametros).Tables[0].Rows[0]["IDPEDIDO"].ToString());
+            return ClsNConexion.EjecutarProcedimiento(Procedimiento, parametros).Tables[0].Rows[0]["IdPedido"].ToString();
         }
 
         public static DataTable Listar()
         {
-            return ClsNConexion.EjecutarProcedimiento("SP_LISTAR_PEDIDOS").Tables[0];
+            return ClsNConexion.EjecutarProcedimiento("ListarPedido").Tables[0];
         }
 
-        public static string NumeroBoleta()
+        public static string GenerarId()
         {
-            return ClsNConexion.EjecutarProcedimiento("SP_GENERAR_NUMERO_PEDIDO").Tables[0].Rows[0]["NUMERO"].ToString();
+            return ClsNConexion.EjecutarProcedimiento("GenerarIdPedido").Tables[0].Rows[0]["Id"].ToString();
         }
 
-        public static bool AnularBoleta(int Id)
-        {
-            ClsNSQLParametro[] parametros = new ClsNSQLParametro[2];
-            parametros[0] = new ClsNSQLParametro(Id,"@id" , SqlDbType.Int);
-            parametros[1] = new ClsNSQLParametro(0, "@estado", SqlDbType.Bit);
-            return ClsNConexion.EjecutarProcedimiento("SP_ANULAR_PEDIDO", parametros) != null;
-        }
+        //public static bool AnularBoleta(int Id)
+        //{
+        //    ClsNSQLParametro[] parametros = new ClsNSQLParametro[2];
+        //    parametros[0] = new ClsNSQLParametro(Id,"@id" , SqlDbType.Int);
+        //    parametros[1] = new ClsNSQLParametro(0, "@estado", SqlDbType.Bit);
+        //    return ClsNConexion.EjecutarProcedimiento("SP_ANULAR_PEDIDO", parametros) != null;
+        //}
 
 
         //public static DataTable BuscarEntreDosFechas(DateTime FechaInicio , DateTime FechaFinal)

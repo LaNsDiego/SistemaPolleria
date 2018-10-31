@@ -18,7 +18,7 @@ namespace SistemaPolleria.Negocio
 
             if (Usuario.Id != 0)
             {
-                Procedimiento = "EditarUsuario";
+                Procedimiento = "ActualizarUsuario";
                 parametros = new ClsNSQLParametro[4];
                 parametros[0] = new ClsNSQLParametro(Usuario.IdEmpleado, "@IdEmpleado", SqlDbType.VarChar);
                 parametros[1] = new ClsNSQLParametro(Usuario.Clave, "@Clave", SqlDbType.VarChar);
