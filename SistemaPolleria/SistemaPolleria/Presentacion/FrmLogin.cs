@@ -27,8 +27,15 @@ namespace SistemaPolleria
             DataTable Consulta = ClsNUsuario.IniciarSesion(Usuario);
             if (Consulta.Rows.Count > 0)
             {
-                DataTable Empleado = ClsNEmpleado.Obtener(Consulta.Rows[0]["IdEmpleado"].ToString());
-                int IdCargo = Convert.ToInt32(Empleado.Rows[0]["IdCargo"]);
+                DataTable TablaEmpleado = ClsNEmpleado.Obtener(Consulta.Rows[0]["IdEmpleado"].ToString());
+                ClsEmpleado Empleado = new ClsEmpleado(
+                    TablaEmpleado.Rows[0]["Id"].ToString(),
+                    Convert.ToInt32(TablaEmpleado.Rows[0]["IdCargo"].ToString()),
+                    TablaEmpleado.Rows[0]["Dni"].ToString(),
+                    TablaEmpleado.Rows[0]["Nombre"].ToString(),
+                    TablaEmpleado.Rows[0]["Apellidos"].ToString()
+                    );
+                int IdCargo = Convert.ToInt32(TablaEmpleado.Rows[0]["IdCargo"]);
                 this.Hide();
                 if (IdCargo == 1)
                 {
@@ -37,7 +44,7 @@ namespace SistemaPolleria
                 }
                 else if (IdCargo == 2)
                 {
-                    FrmPrincipalAdministrador frm = new FrmPrincipalAdministrador();
+                    FrmPrincipalAdministrador frm = new FrmPrincipalAdministrador(Empleado);
                     frm.Show();
                 }
 

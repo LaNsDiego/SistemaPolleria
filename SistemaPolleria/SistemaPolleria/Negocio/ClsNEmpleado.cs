@@ -40,7 +40,7 @@ namespace SistemaPolleria.Negocio
 
         public static DataTable Listar()
         {
-            return ClsNConexion.EjecutarProcedimiento("ListarEmpleados").Tables[0];
+            return ClsNConexion.EjecutarProcedimiento("ListarEmpleado").Tables[0];
         }
 
         public static DataTable Obtener(string Id)

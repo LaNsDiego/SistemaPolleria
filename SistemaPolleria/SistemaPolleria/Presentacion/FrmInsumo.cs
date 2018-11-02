@@ -15,6 +15,7 @@ namespace SistemaPolleria.Presentacion
 {
     public partial class FrmInsumo : Form
     {
+        bool GuardarOActualizar;
         public FrmInsumo()
         {
             InitializeComponent();

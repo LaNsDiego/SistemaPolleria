@@ -63,8 +63,8 @@
             this.TxtCantidadUso = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BtnQuitarCarrito = new System.Windows.Forms.Button();
-            this.BtnAgregarCarrito = new System.Windows.Forms.Button();
+            this.BtnQuitarInsumo = new System.Windows.Forms.Button();
+            this.BtnAgregarInsumo = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.BtnBuscar = new System.Windows.Forms.Button();
@@ -464,33 +464,33 @@
             this.dataGridView1.Size = new System.Drawing.Size(543, 190);
             this.dataGridView1.TabIndex = 286;
             // 
-            // BtnQuitarCarrito
+            // BtnQuitarInsumo
             // 
-            this.BtnQuitarCarrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.BtnQuitarCarrito.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.BtnQuitarCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnQuitarCarrito.Font = new System.Drawing.Font("Roboto", 10F);
-            this.BtnQuitarCarrito.ForeColor = System.Drawing.Color.White;
-            this.BtnQuitarCarrito.Location = new System.Drawing.Point(749, 203);
-            this.BtnQuitarCarrito.Name = "BtnQuitarCarrito";
-            this.BtnQuitarCarrito.Size = new System.Drawing.Size(127, 32);
-            this.BtnQuitarCarrito.TabIndex = 288;
-            this.BtnQuitarCarrito.Text = "Quitar";
-            this.BtnQuitarCarrito.UseVisualStyleBackColor = false;
+            this.BtnQuitarInsumo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.BtnQuitarInsumo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.BtnQuitarInsumo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnQuitarInsumo.Font = new System.Drawing.Font("Roboto", 10F);
+            this.BtnQuitarInsumo.ForeColor = System.Drawing.Color.White;
+            this.BtnQuitarInsumo.Location = new System.Drawing.Point(749, 203);
+            this.BtnQuitarInsumo.Name = "BtnQuitarInsumo";
+            this.BtnQuitarInsumo.Size = new System.Drawing.Size(127, 32);
+            this.BtnQuitarInsumo.TabIndex = 288;
+            this.BtnQuitarInsumo.Text = "Quitar";
+            this.BtnQuitarInsumo.UseVisualStyleBackColor = false;
             // 
-            // BtnAgregarCarrito
+            // BtnAgregarInsumo
             // 
-            this.BtnAgregarCarrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.BtnAgregarCarrito.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.BtnAgregarCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregarCarrito.Font = new System.Drawing.Font("Roboto", 10F);
-            this.BtnAgregarCarrito.ForeColor = System.Drawing.Color.White;
-            this.BtnAgregarCarrito.Location = new System.Drawing.Point(610, 203);
-            this.BtnAgregarCarrito.Name = "BtnAgregarCarrito";
-            this.BtnAgregarCarrito.Size = new System.Drawing.Size(127, 32);
-            this.BtnAgregarCarrito.TabIndex = 287;
-            this.BtnAgregarCarrito.Text = "Agregar";
-            this.BtnAgregarCarrito.UseVisualStyleBackColor = false;
+            this.BtnAgregarInsumo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.BtnAgregarInsumo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.BtnAgregarInsumo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAgregarInsumo.Font = new System.Drawing.Font("Roboto", 10F);
+            this.BtnAgregarInsumo.ForeColor = System.Drawing.Color.White;
+            this.BtnAgregarInsumo.Location = new System.Drawing.Point(610, 203);
+            this.BtnAgregarInsumo.Name = "BtnAgregarInsumo";
+            this.BtnAgregarInsumo.Size = new System.Drawing.Size(127, 32);
+            this.BtnAgregarInsumo.TabIndex = 287;
+            this.BtnAgregarInsumo.Text = "Agregar";
+            this.BtnAgregarInsumo.UseVisualStyleBackColor = false;
             // 
             // label9
             // 
@@ -537,8 +537,8 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.BtnBuscar);
-            this.Controls.Add(this.BtnQuitarCarrito);
-            this.Controls.Add(this.BtnAgregarCarrito);
+            this.Controls.Add(this.BtnQuitarInsumo);
+            this.Controls.Add(this.BtnAgregarInsumo);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -598,8 +598,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.Button BtnBuscarInsumo;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button BtnQuitarCarrito;
-        private System.Windows.Forms.Button BtnAgregarCarrito;
+        private System.Windows.Forms.Button BtnQuitarInsumo;
+        private System.Windows.Forms.Button BtnAgregarInsumo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TxtBuscar;
         private System.Windows.Forms.Button BtnBuscar;

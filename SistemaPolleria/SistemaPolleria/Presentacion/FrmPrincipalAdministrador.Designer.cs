@@ -31,14 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipalAdministrador));
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.LblNivelUsuario = new System.Windows.Forms.Label();
+            this.LblApellidoUsuario = new System.Windows.Forms.Label();
+            this.LblNombreUsuario = new System.Windows.Forms.Label();
+            this.LblCargoUsuario = new System.Windows.Forms.Label();
             this.PtbFoto = new System.Windows.Forms.PictureBox();
-            this.BtnListaBoleta = new System.Windows.Forms.Button();
+            this.BtnCompra = new System.Windows.Forms.Button();
             this.BtnAlumno = new System.Windows.Forms.Button();
             this.BtnSalirSistema = new System.Windows.Forms.Button();
             this.BtnProducto = new System.Windows.Forms.Button();
-            this.BtnEmpleado = new System.Windows.Forms.Button();
+            this.BtnKardex = new System.Windows.Forms.Button();
             this.BtnInsumo = new System.Windows.Forms.Button();
             this.BtnPedidoMesa = new System.Windows.Forms.Button();
             this.PanelPadre = new System.Windows.Forms.Panel();
@@ -51,11 +52,11 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.panel3.Controls.Add(this.panel2);
-            this.panel3.Controls.Add(this.BtnListaBoleta);
+            this.panel3.Controls.Add(this.BtnCompra);
             this.panel3.Controls.Add(this.BtnAlumno);
             this.panel3.Controls.Add(this.BtnSalirSistema);
             this.panel3.Controls.Add(this.BtnProducto);
-            this.panel3.Controls.Add(this.BtnEmpleado);
+            this.panel3.Controls.Add(this.BtnKardex);
             this.panel3.Controls.Add(this.BtnInsumo);
             this.panel3.Controls.Add(this.BtnPedidoMesa);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
@@ -67,35 +68,47 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.LblNivelUsuario);
+            this.panel2.Controls.Add(this.LblApellidoUsuario);
+            this.panel2.Controls.Add(this.LblNombreUsuario);
+            this.panel2.Controls.Add(this.LblCargoUsuario);
             this.panel2.Controls.Add(this.PtbFoto);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 120);
             this.panel2.TabIndex = 6;
             // 
-            // label1
+            // LblApellidoUsuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 8.25F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(82, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Apellidos y Nombres";
+            this.LblApellidoUsuario.AutoSize = true;
+            this.LblApellidoUsuario.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.LblApellidoUsuario.ForeColor = System.Drawing.Color.White;
+            this.LblApellidoUsuario.Location = new System.Drawing.Point(83, 61);
+            this.LblApellidoUsuario.Name = "LblApellidoUsuario";
+            this.LblApellidoUsuario.Size = new System.Drawing.Size(111, 15);
+            this.LblApellidoUsuario.TabIndex = 1;
+            this.LblApellidoUsuario.Text = "Apellidos y Nombres";
             // 
-            // LblNivelUsuario
+            // LblNombreUsuario
             // 
-            this.LblNivelUsuario.AutoSize = true;
-            this.LblNivelUsuario.Font = new System.Drawing.Font("Roboto", 10.25F);
-            this.LblNivelUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(125)))), ((int)(((byte)(139)))));
-            this.LblNivelUsuario.Location = new System.Drawing.Point(82, 12);
-            this.LblNivelUsuario.Name = "LblNivelUsuario";
-            this.LblNivelUsuario.Size = new System.Drawing.Size(100, 19);
-            this.LblNivelUsuario.TabIndex = 0;
-            this.LblNivelUsuario.Text = "Administrador";
+            this.LblNombreUsuario.AutoSize = true;
+            this.LblNombreUsuario.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.LblNombreUsuario.ForeColor = System.Drawing.Color.White;
+            this.LblNombreUsuario.Location = new System.Drawing.Point(82, 40);
+            this.LblNombreUsuario.Name = "LblNombreUsuario";
+            this.LblNombreUsuario.Size = new System.Drawing.Size(111, 15);
+            this.LblNombreUsuario.TabIndex = 1;
+            this.LblNombreUsuario.Text = "Apellidos y Nombres";
+            // 
+            // LblCargoUsuario
+            // 
+            this.LblCargoUsuario.AutoSize = true;
+            this.LblCargoUsuario.Font = new System.Drawing.Font("Roboto", 10.25F);
+            this.LblCargoUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(125)))), ((int)(((byte)(139)))));
+            this.LblCargoUsuario.Location = new System.Drawing.Point(82, 12);
+            this.LblCargoUsuario.Name = "LblCargoUsuario";
+            this.LblCargoUsuario.Size = new System.Drawing.Size(100, 19);
+            this.LblCargoUsuario.TabIndex = 0;
+            this.LblCargoUsuario.Text = "Administrador";
             // 
             // PtbFoto
             // 
@@ -107,22 +120,23 @@
             this.PtbFoto.TabIndex = 0;
             this.PtbFoto.TabStop = false;
             // 
-            // BtnListaBoleta
+            // BtnCompra
             // 
-            this.BtnListaBoleta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.BtnListaBoleta.FlatAppearance.BorderSize = 0;
-            this.BtnListaBoleta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnListaBoleta.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnListaBoleta.ForeColor = System.Drawing.Color.White;
-            this.BtnListaBoleta.Image = ((System.Drawing.Image)(resources.GetObject("BtnListaBoleta.Image")));
-            this.BtnListaBoleta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnListaBoleta.Location = new System.Drawing.Point(0, 224);
-            this.BtnListaBoleta.Name = "BtnListaBoleta";
-            this.BtnListaBoleta.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnListaBoleta.Size = new System.Drawing.Size(200, 43);
-            this.BtnListaBoleta.TabIndex = 5;
-            this.BtnListaBoleta.Text = "Lista de Boletas";
-            this.BtnListaBoleta.UseVisualStyleBackColor = false;
+            this.BtnCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.BtnCompra.FlatAppearance.BorderSize = 0;
+            this.BtnCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCompra.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCompra.ForeColor = System.Drawing.Color.White;
+            this.BtnCompra.Image = ((System.Drawing.Image)(resources.GetObject("BtnCompra.Image")));
+            this.BtnCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCompra.Location = new System.Drawing.Point(0, 224);
+            this.BtnCompra.Name = "BtnCompra";
+            this.BtnCompra.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnCompra.Size = new System.Drawing.Size(200, 43);
+            this.BtnCompra.TabIndex = 5;
+            this.BtnCompra.Text = "Compras";
+            this.BtnCompra.UseVisualStyleBackColor = false;
+            this.BtnCompra.Click += new System.EventHandler(this.BtnCompra_Click);
             // 
             // BtnAlumno
             // 
@@ -179,22 +193,23 @@
             this.BtnProducto.UseVisualStyleBackColor = false;
             this.BtnProducto.Click += new System.EventHandler(this.BtnProducto_Click);
             // 
-            // BtnEmpleado
+            // BtnKardex
             // 
-            this.BtnEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.BtnEmpleado.FlatAppearance.BorderSize = 0;
-            this.BtnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEmpleado.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEmpleado.ForeColor = System.Drawing.Color.White;
-            this.BtnEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("BtnEmpleado.Image")));
-            this.BtnEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEmpleado.Location = new System.Drawing.Point(0, 273);
-            this.BtnEmpleado.Name = "BtnEmpleado";
-            this.BtnEmpleado.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnEmpleado.Size = new System.Drawing.Size(200, 43);
-            this.BtnEmpleado.TabIndex = 2;
-            this.BtnEmpleado.Text = "Empleado";
-            this.BtnEmpleado.UseVisualStyleBackColor = false;
+            this.BtnKardex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.BtnKardex.FlatAppearance.BorderSize = 0;
+            this.BtnKardex.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnKardex.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnKardex.ForeColor = System.Drawing.Color.White;
+            this.BtnKardex.Image = ((System.Drawing.Image)(resources.GetObject("BtnKardex.Image")));
+            this.BtnKardex.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnKardex.Location = new System.Drawing.Point(0, 273);
+            this.BtnKardex.Name = "BtnKardex";
+            this.BtnKardex.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnKardex.Size = new System.Drawing.Size(200, 43);
+            this.BtnKardex.TabIndex = 2;
+            this.BtnKardex.Text = "Kardex";
+            this.BtnKardex.UseVisualStyleBackColor = false;
+            this.BtnKardex.Click += new System.EventHandler(this.BtnKardex_Click);
             // 
             // BtnInsumo
             // 
@@ -252,6 +267,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrincipalAdministrador";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmPrincipalAdministrador_Load);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -264,16 +280,17 @@
 
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label LblNivelUsuario;
+        private System.Windows.Forms.Label LblNombreUsuario;
+        private System.Windows.Forms.Label LblCargoUsuario;
         private System.Windows.Forms.PictureBox PtbFoto;
-        private System.Windows.Forms.Button BtnListaBoleta;
+        private System.Windows.Forms.Button BtnCompra;
         private System.Windows.Forms.Button BtnAlumno;
         private System.Windows.Forms.Button BtnSalirSistema;
         private System.Windows.Forms.Button BtnProducto;
-        private System.Windows.Forms.Button BtnEmpleado;
+        private System.Windows.Forms.Button BtnKardex;
         private System.Windows.Forms.Button BtnInsumo;
         private System.Windows.Forms.Button BtnPedidoMesa;
         private System.Windows.Forms.Panel PanelPadre;
+        private System.Windows.Forms.Label LblApellidoUsuario;
     }
 }

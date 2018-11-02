@@ -18,7 +18,6 @@ namespace SistemaPolleria.Negocio
 
             if (!EsNuevo)
             {
-                Console.WriteLine("ACTUALIZADO");
                 Procedimiento = "ActualizarInsumo";
                 parametros = new ClsNSQLParametro[6];
                 parametros[0] = new ClsNSQLParametro(Insumo.Id, "@Id", SqlDbType.VarChar);
@@ -30,7 +29,6 @@ namespace SistemaPolleria.Negocio
             }
             else
             {
-                Console.WriteLine("CREADO");
                 Procedimiento = "CrearInsumo";
                 parametros = new ClsNSQLParametro[6];
                 parametros[0] = new ClsNSQLParametro(Insumo.Id, "@Id", SqlDbType.VarChar);
@@ -46,6 +44,13 @@ namespace SistemaPolleria.Negocio
         public static DataTable Listar()
         {
             return ClsNConexion.EjecutarProcedimiento("ListarInsumo").Tables[0];
+        }
+
+        public static DataTable Obtener(string Id)
+        {
+            ClsNSQLParametro[] parametros = new ClsNSQLParametro[1];
+            parametros[0] = new ClsNSQLParametro(Id, "@Id", SqlDbType.VarChar);
+            return ClsNConexion.EjecutarProcedimiento("ObtenerInsumo",parametros).Tables[0];
         }
 
         public static string GenerarId()

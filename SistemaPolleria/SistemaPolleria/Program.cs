@@ -17,7 +17,7 @@ namespace SistemaPolleria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPrincipalAdministrador());
+            Application.Run(new FrmLogin());
         }
     }
 }
