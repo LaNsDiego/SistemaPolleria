@@ -1,6 +1,7 @@
 ﻿using SistemaPolleria.Ayuda;
 using SistemaPolleria.Entidad;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -43,7 +44,12 @@ namespace SistemaPolleria.Negocio
 
         public static DataTable Listar()
         {
-            return ClsNConexion.EjecutarProcedimiento("ListarProductos").Tables[0];
+            return ClsNConexion.EjecutarProcedimiento("ListarProducto").Tables[0];
+        }
+
+        public static string GenerarId()
+        {
+            return ClsNConexion.EjecutarProcedimiento("GenerarIdProducto").Tables[0].Rows[0]["Id"].ToString();
         }
 
         public static DataTable Obtener(string Id)
@@ -52,5 +58,8 @@ namespace SistemaPolleria.Negocio
             parametros[0] = new ClsNSQLParametro(Id, "@Id", SqlDbType.VarChar);
             return ClsNConexion.EjecutarProcedimiento("ObtenerProducto", parametros).Tables[0];
         }
+
+        
+
     }
 }

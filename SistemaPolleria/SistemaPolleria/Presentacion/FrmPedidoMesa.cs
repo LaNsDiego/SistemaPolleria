@@ -2,6 +2,7 @@
 using SistemaPolleria.Entidad;
 using SistemaPolleria.Negocio;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,10 +20,25 @@ namespace SistemaPolleria.Presentacion
         public string ProductoId { get; private set; }
         public string MesaId { get; private set; }
         public string ClienteId { get; private set; }
+        //ArrayList Mesas = new ArrayList();
 
         public FrmPedidoMesa()
         {
             InitializeComponent();
+        }
+
+
+        public void MostarMesas()
+        {
+            DataTable TablaMesasPorNivel = ClsNMesa.Listar();
+
+            foreach (DataRow Mesa in TablaMesasPorNivel.Rows)
+            {
+                if (Convert.ToInt32(Mesa["Piso"]) == Convert.ToInt32(CmbNumeroPiso.SelectedItem.ToString()) )
+                {
+                    CmbCodigoMesa.Items.Add(Mesa["Id"]);
+                }
+            }
         }
 
         private void AjustarControles(bool disponibilidad)
@@ -163,6 +179,7 @@ namespace SistemaPolleria.Presentacion
 
         private void FrmPedidoMesa_Load(object sender, EventArgs e)
         {
+            MostarMesas();
             AjustarControles(false);
         }
 
@@ -212,6 +229,18 @@ namespace SistemaPolleria.Presentacion
                             Convert.ToDouble(Fila.Cells[4].Value)
                         );
                     ClsNDetallePedido.Guardar(Detalle);
+
+                    DataTable TablaDetalleProducto = ClsNDetalleProducto.ObtenerPorProducto(Detalle.IdProducto);
+                    foreach (DataRow FilaDetalleProducto in TablaDetalleProducto.Rows)
+                    {
+                        ClsDetalleProducto DetalleProducto = new ClsDetalleProducto(
+                            FilaDetalleProducto["IdInsumo"].ToString(),
+                            FilaDetalleProducto["IdProducto"].ToString(),
+                            Convert.ToDouble(FilaDetalleProducto["Cantidad"])
+                            );
+                        ClsNInsumo.Salida(DetalleProducto);
+                    }
+                    
                 }
                 //LimpiarControles();
                 AjustarControles(false);
@@ -223,6 +252,16 @@ namespace SistemaPolleria.Presentacion
             {
                 MessageBox.Show("Llene la Pedido correctamente");
             }
+        }
+
+        private void CmbNumeroPiso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MostarMesas();
+        }
+
+        private void BtnRealizarPago_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

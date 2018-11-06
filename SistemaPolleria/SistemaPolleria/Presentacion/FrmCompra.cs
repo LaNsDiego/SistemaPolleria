@@ -24,6 +24,35 @@ namespace SistemaPolleria.Presentacion
             InitializeComponent();
         }
 
+        private void AjustarControles(bool disponibilidad)
+        {
+            List<Control> Lista = new List<Control>
+            {
+                CmbTipoComprobante,
+                TxtObservacion,
+                TxtSerie,
+                TxtNumero,
+                DtpFecha,
+                TxtDocumento,
+                TxtRazonSocialEmpleado,
+                TxtCodigoProveedor,
+                TxtRazonSocialProveedor,
+                TxtRuc,
+                TxtIdInsumo,
+                TxtNombreInsumo,
+                TxtCantidadCompra,
+                TxtCostoUnitario,
+                TxtTotalNumerico,
+                TxtTotalLiteral,
+                TxtValorIgv,
+                BtnAgregar,
+                BtnQuitar,
+                BtnGuardar
+
+            };
+            ClsNUI.AjustarEstadoControles(Lista, disponibilidad);
+        }
+
         private void CalcularTotal()
         {
             double ValorIGV = SumaSubtotal * 0.18;
@@ -34,6 +63,7 @@ namespace SistemaPolleria.Presentacion
 
         private void FrmCompra_Load(object sender, EventArgs e)
         {
+            AjustarControles(false);
             EmpleadoId = FrmPrincipalAdministrador.Empleado.Id;
             TxtDocumento.Text = FrmPrincipalAdministrador.Empleado.Dni;
             TxtRazonSocialEmpleado.Text = FrmPrincipalAdministrador.Empleado.Apellidos + " " + FrmPrincipalAdministrador.Empleado.Nombre;
@@ -137,7 +167,7 @@ namespace SistemaPolleria.Presentacion
                                 Convert.ToDouble(Fila.Cells["Cantidad"].Value),
                                 Convert.ToDouble(Fila.Cells["Subtotal"].Value)
                 );
-                ClsNDetalleCompra.Guardar(DetalleCompra);
+                
                 string KardexId = ClsNKardex.ObtenerKardexDeUnInsumo(Fila.Cells["IdInsumo"].Value.ToString());
                 ClsDetalleKardex DetalleKardex = new ClsDetalleKardex(
                     KardexId,
@@ -150,8 +180,30 @@ namespace SistemaPolleria.Presentacion
                     DetalleCompra.CostoUnitario,
                     DetalleCompra.Subtotal
                     );
+                ClsNDetalleCompra.Guardar(DetalleCompra);
                 ClsNDetalleKardex.Guardar(DetalleKardex);
+                ClsNInsumo.Entrada(DetalleCompra);
             }
+        }
+
+        private void BtnNuevo_Click(object sender, EventArgs e)
+        {
+            List<Control> Lista = new List<Control>
+            {
+                CmbTipoComprobante,
+                TxtObservacion,
+                TxtSerie,
+                TxtNumero,
+                TxtCodigoProveedor,
+                TxtIdInsumo,
+                TxtCantidadCompra,
+                TxtCostoUnitario,
+                BtnAgregar,
+                BtnQuitar,
+                BtnGuardar
+
+            };
+            ClsNUI.AjustarEstadoControles(Lista, true);
         }
     }
 }

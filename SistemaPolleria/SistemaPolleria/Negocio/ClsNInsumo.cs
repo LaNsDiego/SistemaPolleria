@@ -46,6 +46,26 @@ namespace SistemaPolleria.Negocio
             return ClsNConexion.EjecutarProcedimiento("ListarInsumo").Tables[0];
         }
 
+        public static bool Entrada(ClsDetalleCompra DetalleCompra)
+        {
+            ClsNSQLParametro[] parametros = new ClsNSQLParametro[3];
+            parametros[0] = new ClsNSQLParametro(DetalleCompra.IdInsumo, "@IdInsumo", SqlDbType.VarChar);
+            parametros[1] = new ClsNSQLParametro(DetalleCompra.Cantidad, "@CantidadCompra", SqlDbType.Decimal);
+            parametros[2] = new ClsNSQLParametro(DetalleCompra.Subtotal, "@CostoTotalCompra", SqlDbType.Decimal);
+            return ClsNConexion.EjecutarProcedimiento("EntradaInsumo", parametros) != null;
+        }
+
+        public static bool Salida(ClsDetalleProducto DetalleProducto)
+        {
+            ClsNSQLParametro[] parametros = new ClsNSQLParametro[2];
+            parametros[0] = new ClsNSQLParametro(DetalleProducto, "@IdInsumo", SqlDbType.VarChar);
+            parametros[1] = new ClsNSQLParametro(DetalleProducto.Cantidad, "@CantidadVenta", SqlDbType.Decimal);
+            return Convert.ToInt32(ClsNConexion.EjecutarProcedimiento("SalidaInsumo", parametros).Tables[0].Rows[0]["ESTADO"]) == 1 ? true : false;
+        }
+        
+
+
+
         public static DataTable Obtener(string Id)
         {
             ClsNSQLParametro[] parametros = new ClsNSQLParametro[1];

@@ -15,12 +15,44 @@ namespace SistemaPolleria.Presentacion
 {
     public partial class FrmKardex : Form
     {
+        bool EsNuevo;
         public FrmKardex()
         {
             InitializeComponent();
         }
 
         private List<int> EstablescimientosId = new List<int>();
+
+        private void AjustarControles(bool disponibilidad)
+        {
+            List<Control> Lista = new List<Control>
+            {
+                TxtIdKardex,
+                CmbPeriodo,
+                TxtRazonSocial,
+                TxtRuc,
+                CmbEstablecimiento,
+                TxtIdInsumo,
+                TxtNombreInsumo,
+                TxtRuc,
+                BtnGuardar
+
+            };
+            ClsNUI.AjustarEstadoControles(Lista, disponibilidad);
+        }
+        
+        private void LimpiarControles()
+        {
+            List<Control> Lista = new List<Control>
+            {
+                TxtIdKardex,
+                CmbPeriodo,
+                CmbEstablecimiento,
+                TxtIdInsumo,
+                TxtNombreInsumo
+            };
+            ClsNUI.LimpiarControles(Lista);
+        }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
@@ -32,8 +64,10 @@ namespace SistemaPolleria.Presentacion
                 EstablescimientosId[CmbEstablecimiento.SelectedIndex],
                 TxtIdInsumo.Text
                 );
-            ClsNKardex.Guardar(Kardex,true);
+            ClsNKardex.Guardar(Kardex,EsNuevo);
             DgvKardex.DataSource = ClsNKardex.Listar();
+            AjustarControles(false);
+            LimpiarControles();
         }
 
         private void TxtIdInsumo_KeyDown(object sender, KeyEventArgs e)
@@ -65,10 +99,40 @@ namespace SistemaPolleria.Presentacion
             EstablescimientosId.Add(2);
             CmbEstablecimiento.Items.Add("ALMACEN GENERAL");
             CmbEstablecimiento.Items.Add("ALMACEN COCINA");
-            TxtIdKardex.Text = ClsNKardex.GenerarId();
             CmbPeriodo.Items.Add("Octubre 2018");
             CmbPeriodo.SelectedIndex = 0;
+            AjustarControles(false);
             DgvKardex.DataSource = ClsNKardex.Listar();
+        }
+
+        private void BtnNuevo_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
+            EsNuevo = true;
+            TxtIdKardex.Text = ClsNKardex.GenerarId();
+            List<Control> Lista = new List<Control>
+            {
+                CmbPeriodo,
+                CmbEstablecimiento,
+                TxtIdInsumo,
+                BtnGuardar
+
+            };
+            ClsNUI.AjustarEstadoControles(Lista, true);
+        }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            EsNuevo = false;
+            List<Control> Lista = new List<Control>
+            {
+                CmbPeriodo,
+                CmbEstablecimiento,
+                TxtIdInsumo,
+                BtnGuardar
+
+            };
+            ClsNUI.AjustarEstadoControles(Lista, true);
         }
     }
 }

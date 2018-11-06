@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCompra));
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.TxtNumero = new System.Windows.Forms.TextBox();
             this.TxtSerie = new System.Windows.Forms.TextBox();
@@ -43,10 +42,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.TxtCostoUnitario = new System.Windows.Forms.TextBox();
             this.TxtIdInsumo = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.TxtSubtotal = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.TxtCantidadCompra = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.BtnQuitar = new System.Windows.Forms.Button();
@@ -55,14 +51,12 @@
             this.TxtRuc = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.TxtCodigoProveedor = new System.Windows.Forms.TextBox();
-            this.BtnListaProveedor = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.TxtRazonSocialProveedor = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtDocumento = new System.Windows.Forms.TextBox();
-            this.BtnBuscarEmpleado = new System.Windows.Forms.Button();
             this.TxtRazonSocialEmpleado = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -76,14 +70,14 @@
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.DgvDetalleCompra = new System.Windows.Forms.DataGridView();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.TxtValorIgv = new System.Windows.Forms.TextBox();
             this.IdInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Insumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CostoUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.TxtValorIgv = new System.Windows.Forms.TextBox();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -189,10 +183,7 @@
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.TxtCostoUnitario);
             this.groupBox4.Controls.Add(this.TxtIdInsumo);
-            this.groupBox4.Controls.Add(this.button2);
             this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.TxtSubtotal);
-            this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.TxtCantidadCompra);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Font = new System.Drawing.Font("Roboto", 10.25F);
@@ -257,21 +248,6 @@
             this.TxtIdInsumo.TabIndex = 267;
             this.TxtIdInsumo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtIdProducto_KeyDown);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(152, 49);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(39, 26);
-            this.button2.TabIndex = 269;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -282,27 +258,6 @@
             this.label5.Size = new System.Drawing.Size(97, 17);
             this.label5.TabIndex = 270;
             this.label5.Text = "Costo Unitario";
-            // 
-            // TxtSubtotal
-            // 
-            this.TxtSubtotal.BackColor = System.Drawing.Color.White;
-            this.TxtSubtotal.Font = new System.Drawing.Font("Roboto", 10.25F);
-            this.TxtSubtotal.ForeColor = System.Drawing.Color.Black;
-            this.TxtSubtotal.Location = new System.Drawing.Point(608, 49);
-            this.TxtSubtotal.Name = "TxtSubtotal";
-            this.TxtSubtotal.Size = new System.Drawing.Size(117, 26);
-            this.TxtSubtotal.TabIndex = 267;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(606, 29);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 17);
-            this.label12.TabIndex = 268;
-            this.label12.Text = "Subtotal";
             // 
             // TxtCantidadCompra
             // 
@@ -321,19 +276,20 @@
             this.label14.ForeColor = System.Drawing.Color.Gray;
             this.label14.Location = new System.Drawing.Point(365, 30);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(132, 17);
+            this.label14.Size = new System.Drawing.Size(115, 17);
             this.label14.TabIndex = 266;
-            this.label14.Text = "Cantidad a comprar";
+            this.label14.Text = "Cantidad compra";
             // 
             // BtnQuitar
             // 
             this.BtnQuitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.BtnQuitar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.BtnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnQuitar.Font = new System.Drawing.Font("Roboto", 10.25F);
             this.BtnQuitar.ForeColor = System.Drawing.Color.White;
-            this.BtnQuitar.Location = new System.Drawing.Point(636, 422);
+            this.BtnQuitar.Location = new System.Drawing.Point(602, 422);
             this.BtnQuitar.Name = "BtnQuitar";
-            this.BtnQuitar.Size = new System.Drawing.Size(144, 48);
+            this.BtnQuitar.Size = new System.Drawing.Size(178, 48);
             this.BtnQuitar.TabIndex = 275;
             this.BtnQuitar.Text = "Quitar del Pedido";
             this.BtnQuitar.UseVisualStyleBackColor = false;
@@ -343,10 +299,11 @@
             this.BtnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.BtnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAgregar.Font = new System.Drawing.Font("Roboto", 10.25F);
             this.BtnAgregar.ForeColor = System.Drawing.Color.White;
-            this.BtnAgregar.Location = new System.Drawing.Point(492, 422);
+            this.BtnAgregar.Location = new System.Drawing.Point(404, 422);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(138, 48);
+            this.BtnAgregar.Size = new System.Drawing.Size(172, 48);
             this.BtnAgregar.TabIndex = 274;
             this.BtnAgregar.Text = "Agregar al Pedido";
             this.BtnAgregar.UseVisualStyleBackColor = false;
@@ -357,7 +314,6 @@
             this.groupBox3.Controls.Add(this.TxtRuc);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.TxtCodigoProveedor);
-            this.groupBox3.Controls.Add(this.BtnListaProveedor);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.TxtRazonSocialProveedor);
             this.groupBox3.Controls.Add(this.label11);
@@ -402,21 +358,6 @@
             this.TxtCodigoProveedor.TabIndex = 260;
             this.TxtCodigoProveedor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCodigoProveedor_KeyDown);
             // 
-            // BtnListaProveedor
-            // 
-            this.BtnListaProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.BtnListaProveedor.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.BtnListaProveedor.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.BtnListaProveedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.BtnListaProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnListaProveedor.ForeColor = System.Drawing.Color.Black;
-            this.BtnListaProveedor.Image = ((System.Drawing.Image)(resources.GetObject("BtnListaProveedor.Image")));
-            this.BtnListaProveedor.Location = new System.Drawing.Point(152, 41);
-            this.BtnListaProveedor.Name = "BtnListaProveedor";
-            this.BtnListaProveedor.Size = new System.Drawing.Size(39, 26);
-            this.BtnListaProveedor.TabIndex = 262;
-            this.BtnListaProveedor.UseVisualStyleBackColor = false;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -453,7 +394,6 @@
             // 
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.TxtDocumento);
-            this.groupBox2.Controls.Add(this.BtnBuscarEmpleado);
             this.groupBox2.Controls.Add(this.TxtRazonSocialEmpleado);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Roboto", 10.25F);
@@ -485,21 +425,6 @@
             this.TxtDocumento.Name = "TxtDocumento";
             this.TxtDocumento.Size = new System.Drawing.Size(132, 26);
             this.TxtDocumento.TabIndex = 260;
-            // 
-            // BtnBuscarEmpleado
-            // 
-            this.BtnBuscarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.BtnBuscarEmpleado.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.BtnBuscarEmpleado.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.BtnBuscarEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.BtnBuscarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscarEmpleado.ForeColor = System.Drawing.Color.Black;
-            this.BtnBuscarEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarEmpleado.Image")));
-            this.BtnBuscarEmpleado.Location = new System.Drawing.Point(152, 40);
-            this.BtnBuscarEmpleado.Name = "BtnBuscarEmpleado";
-            this.BtnBuscarEmpleado.Size = new System.Drawing.Size(39, 26);
-            this.BtnBuscarEmpleado.TabIndex = 262;
-            this.BtnBuscarEmpleado.UseVisualStyleBackColor = false;
             // 
             // TxtRazonSocialEmpleado
             // 
@@ -627,6 +552,7 @@
             this.BtnNuevo.TabIndex = 280;
             this.BtnNuevo.Text = "Nuevo";
             this.BtnNuevo.UseVisualStyleBackColor = false;
+            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // BtnGuardar
             // 
@@ -661,6 +587,36 @@
             this.DgvDetalleCompra.Size = new System.Drawing.Size(752, 179);
             this.DgvDetalleCompra.TabIndex = 278;
             // 
+            // IdInsumo
+            // 
+            this.IdInsumo.HeaderText = "IdInsumo";
+            this.IdInsumo.Name = "IdInsumo";
+            this.IdInsumo.ReadOnly = true;
+            // 
+            // Insumo
+            // 
+            this.Insumo.HeaderText = "Insumo";
+            this.Insumo.Name = "Insumo";
+            this.Insumo.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // CostoUnitario
+            // 
+            this.CostoUnitario.HeaderText = "CostoUnitario";
+            this.CostoUnitario.Name = "CostoUnitario";
+            this.CostoUnitario.ReadOnly = true;
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.ReadOnly = true;
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -693,36 +649,6 @@
             this.TxtValorIgv.Size = new System.Drawing.Size(106, 26);
             this.TxtValorIgv.TabIndex = 291;
             this.TxtValorIgv.Text = "0";
-            // 
-            // IdInsumo
-            // 
-            this.IdInsumo.HeaderText = "IdInsumo";
-            this.IdInsumo.Name = "IdInsumo";
-            this.IdInsumo.ReadOnly = true;
-            // 
-            // Insumo
-            // 
-            this.Insumo.HeaderText = "Insumo";
-            this.Insumo.Name = "Insumo";
-            this.Insumo.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // CostoUnitario
-            // 
-            this.CostoUnitario.HeaderText = "CostoUnitario";
-            this.CostoUnitario.Name = "CostoUnitario";
-            this.CostoUnitario.ReadOnly = true;
-            // 
-            // Subtotal
-            // 
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.ReadOnly = true;
             // 
             // FrmCompra
             // 
@@ -778,23 +704,19 @@
         private System.Windows.Forms.TextBox TxtTotalNumerico;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button BtnQuitar;
-        private System.Windows.Forms.TextBox TxtSubtotal;
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox TxtCantidadCompra;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox TxtRuc;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox TxtCodigoProveedor;
-        private System.Windows.Forms.Button BtnListaProveedor;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox TxtRazonSocialProveedor;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TxtDocumento;
-        private System.Windows.Forms.Button BtnBuscarEmpleado;
         private System.Windows.Forms.TextBox TxtRazonSocialEmpleado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -811,7 +733,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox TxtCostoUnitario;
         private System.Windows.Forms.TextBox TxtIdInsumo;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtObservacion;
         private System.Windows.Forms.Label label15;

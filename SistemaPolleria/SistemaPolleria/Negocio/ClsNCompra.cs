@@ -53,5 +53,7 @@ namespace SistemaPolleria.Negocio
             return ClsNConexion.EjecutarProcedimiento("ListarCompra").Tables[0];
         }
 
+
+
     }
 }

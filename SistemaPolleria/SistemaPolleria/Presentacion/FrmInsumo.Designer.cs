@@ -59,6 +59,7 @@
             this.DgvInsumo.ReadOnly = true;
             this.DgvInsumo.Size = new System.Drawing.Size(706, 244);
             this.DgvInsumo.TabIndex = 285;
+            this.DgvInsumo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvInsumo_CellClick);
             // 
             // TxtCantidad
             // 
@@ -272,6 +273,7 @@
             this.BtnModificar.TabIndex = 286;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = false;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // FrmInsumo
             // 

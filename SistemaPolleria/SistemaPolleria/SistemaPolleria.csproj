@@ -72,6 +72,7 @@
     <Compile Include="Negocio\ClsNEmpleado.cs" />
     <Compile Include="Negocio\ClsNInsumo.cs" />
     <Compile Include="Negocio\ClsNKardex.cs" />
+    <Compile Include="Negocio\ClsNMesa.cs" />
     <Compile Include="Negocio\ClsNPedido.cs" />
     <Compile Include="Ayuda\ClsNRequerido.cs" />
     <Compile Include="Ayuda\ClsNSQLParametro.cs" />

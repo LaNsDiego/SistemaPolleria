@@ -6036,7 +6036,7 @@
         tEXEgAp62qLtmF1Tn8N7Vid03QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="BtnAlumno.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnPedidoDelivery.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABLklEQVRIS+2UPUrEQBiGo4Js64KdsmBr
@@ -6086,15 +6086,6 @@
         Pa5JXtpSmEQkUEoRo6+FgNySUdwAR5PBCR5B1qSXetYqc+KSLzDrAgvwiyTbviYoeZDLVuM8yKCdb0Tf
         TXiUJ0g/Mh9a9A2+MQdZG2awA46+aQ+yB0U28l0+KpM8lA0IvD6TNybeGpwXDUH2V3cA+yg8CmOrrUwm
         8O9zs578dqMfiYP5eufhfNrU5L4WAnIty/QFi5F+S6Rai34AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="BtnPedidoMesa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAYAAACAl21KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAALhJREFUOE+1lIENgyAQRTuCIziCIzgaI3SEjtJRGKEb0HuEI4iXE1s1eYHcfR5C
-        jI+UkkmMcRLeQiown6wsmEXoJFVmZYEFoQv3PAtWTwmIrMZpqqh/1VEORVIbumzte6Khy9aeJ9LFr4Kb
-        Oy0SZivniS472jWXDVKfhbWwOVKTsUUsEPiSeXKvgYdelco89zYiGdn5ozUHMosnUgkjO6/Um02o1Ywn
-        yvNR7hf9wk70L4iOfmwDxPAFg+mx4j0/ebcAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

@@ -47,6 +47,13 @@ namespace SistemaPolleria.Negocio
             return ClsNConexion.EjecutarProcedimiento("ListarUnidadMedida").Tables[0];
         }
 
+        public static DataTable Obtener(int Id)
+        {
+            ClsNSQLParametro[] parametros = new ClsNSQLParametro[1];
+            parametros[0] = new ClsNSQLParametro(Id,"@Id",SqlDbType.Int);
+            return ClsNConexion.EjecutarProcedimiento("ObtenerUnidadMedida",parametros).Tables[0];
+        }
+
         //public static string GenerarId()
         //{
         //    return ClsNConexion.EjecutarProcedimiento("GenerarIdUnidadMedida").Tables[0].Rows[0]["Id"].ToString();

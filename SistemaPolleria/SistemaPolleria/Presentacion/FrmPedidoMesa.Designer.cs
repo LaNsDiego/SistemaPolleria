@@ -43,6 +43,8 @@
             this.RdnEstadoEspera = new System.Windows.Forms.RadioButton();
             this.RdnEstadoAtendido = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.CmbNumeroPiso = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.TxtStockProducto = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -62,20 +64,26 @@
             this.TxtTotalLiteral = new System.Windows.Forms.TextBox();
             this.TxtTotalNumerico = new System.Windows.Forms.TextBox();
             this.DgvPedidosMesa = new System.Windows.Forms.DataGridView();
-            this.BtnRealizarPago = new System.Windows.Forms.Button();
             this.IDPRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CANTIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IMPORTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnRealizarPago = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.CmbNumeroPiso = new System.Windows.Forms.ComboBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.TxtNumeroBoleta = new System.Windows.Forms.TextBox();
+            this.TxtSerieBoleta = new System.Windows.Forms.TextBox();
+            this.TxtRucBoleta = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.GpbEstado.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPedidosMesa)).BeginInit();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // CmbCodigoMesa
@@ -251,6 +259,28 @@
             this.groupBox1.TabIndex = 270;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Pedido";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label4.ForeColor = System.Drawing.Color.Gray;
+            this.label4.Location = new System.Drawing.Point(135, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 17);
+            this.label4.TabIndex = 270;
+            this.label4.Text = "Numero de Piso";
+            // 
+            // CmbNumeroPiso
+            // 
+            this.CmbNumeroPiso.Font = new System.Drawing.Font("Roboto", 10.25F);
+            this.CmbNumeroPiso.ForeColor = System.Drawing.Color.Gray;
+            this.CmbNumeroPiso.FormattingEnabled = true;
+            this.CmbNumeroPiso.Location = new System.Drawing.Point(138, 44);
+            this.CmbNumeroPiso.Name = "CmbNumeroPiso";
+            this.CmbNumeroPiso.Size = new System.Drawing.Size(109, 27);
+            this.CmbNumeroPiso.TabIndex = 271;
+            this.CmbNumeroPiso.SelectedIndexChanged += new System.EventHandler(this.CmbNumeroPiso_SelectedIndexChanged);
             // 
             // groupBox3
             // 
@@ -483,22 +513,6 @@
             this.DgvPedidosMesa.Size = new System.Drawing.Size(790, 204);
             this.DgvPedidosMesa.TabIndex = 278;
             // 
-            // BtnRealizarPago
-            // 
-            this.BtnRealizarPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.BtnRealizarPago.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.BtnRealizarPago.FlatAppearance.BorderSize = 0;
-            this.BtnRealizarPago.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.BtnRealizarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRealizarPago.Font = new System.Drawing.Font("Roboto", 10F);
-            this.BtnRealizarPago.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnRealizarPago.Location = new System.Drawing.Point(409, 575);
-            this.BtnRealizarPago.Name = "BtnRealizarPago";
-            this.BtnRealizarPago.Size = new System.Drawing.Size(127, 32);
-            this.BtnRealizarPago.TabIndex = 279;
-            this.BtnRealizarPago.Text = "Realizar Pago";
-            this.BtnRealizarPago.UseVisualStyleBackColor = false;
-            // 
             // IDPRODUCTO
             // 
             this.IDPRODUCTO.HeaderText = "IDPRODUCTO";
@@ -529,6 +543,23 @@
             this.IMPORTE.Name = "IMPORTE";
             this.IMPORTE.ReadOnly = true;
             // 
+            // BtnRealizarPago
+            // 
+            this.BtnRealizarPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.BtnRealizarPago.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.BtnRealizarPago.FlatAppearance.BorderSize = 0;
+            this.BtnRealizarPago.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.BtnRealizarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRealizarPago.Font = new System.Drawing.Font("Roboto", 10F);
+            this.BtnRealizarPago.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnRealizarPago.Location = new System.Drawing.Point(409, 575);
+            this.BtnRealizarPago.Name = "BtnRealizarPago";
+            this.BtnRealizarPago.Size = new System.Drawing.Size(127, 32);
+            this.BtnRealizarPago.TabIndex = 279;
+            this.BtnRealizarPago.Text = "Realizar Pago";
+            this.BtnRealizarPago.UseVisualStyleBackColor = false;
+            this.BtnRealizarPago.Click += new System.EventHandler(this.BtnRealizarPago_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -540,26 +571,86 @@
             this.label1.TabIndex = 280;
             this.label1.Text = "Total";
             // 
-            // label4
+            // groupBox5
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(135, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 17);
-            this.label4.TabIndex = 270;
-            this.label4.Text = "Numero de Piso";
+            this.groupBox5.Controls.Add(this.TxtNumeroBoleta);
+            this.groupBox5.Controls.Add(this.TxtSerieBoleta);
+            this.groupBox5.Controls.Add(this.TxtRucBoleta);
+            this.groupBox5.Controls.Add(this.label18);
+            this.groupBox5.Controls.Add(this.label16);
+            this.groupBox5.Controls.Add(this.label17);
+            this.groupBox5.Font = new System.Drawing.Font("Roboto", 10.25F);
+            this.groupBox5.ForeColor = System.Drawing.Color.Gray;
+            this.groupBox5.Location = new System.Drawing.Point(319, 9);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(483, 43);
+            this.groupBox5.TabIndex = 290;
+            this.groupBox5.TabStop = false;
             // 
-            // CmbNumeroPiso
+            // TxtNumeroBoleta
             // 
-            this.CmbNumeroPiso.Font = new System.Drawing.Font("Roboto", 10.25F);
-            this.CmbNumeroPiso.ForeColor = System.Drawing.Color.Gray;
-            this.CmbNumeroPiso.FormattingEnabled = true;
-            this.CmbNumeroPiso.Location = new System.Drawing.Point(138, 44);
-            this.CmbNumeroPiso.Name = "CmbNumeroPiso";
-            this.CmbNumeroPiso.Size = new System.Drawing.Size(109, 27);
-            this.CmbNumeroPiso.TabIndex = 271;
+            this.TxtNumeroBoleta.BackColor = System.Drawing.Color.Silver;
+            this.TxtNumeroBoleta.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.TxtNumeroBoleta.ForeColor = System.Drawing.Color.Black;
+            this.TxtNumeroBoleta.Location = new System.Drawing.Point(398, 16);
+            this.TxtNumeroBoleta.Name = "TxtNumeroBoleta";
+            this.TxtNumeroBoleta.Size = new System.Drawing.Size(79, 22);
+            this.TxtNumeroBoleta.TabIndex = 193;
+            // 
+            // TxtSerieBoleta
+            // 
+            this.TxtSerieBoleta.BackColor = System.Drawing.Color.Silver;
+            this.TxtSerieBoleta.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.TxtSerieBoleta.ForeColor = System.Drawing.Color.Black;
+            this.TxtSerieBoleta.Location = new System.Drawing.Point(247, 14);
+            this.TxtSerieBoleta.Name = "TxtSerieBoleta";
+            this.TxtSerieBoleta.Size = new System.Drawing.Size(79, 22);
+            this.TxtSerieBoleta.TabIndex = 192;
+            this.TxtSerieBoleta.Text = "B001";
+            // 
+            // TxtRucBoleta
+            // 
+            this.TxtRucBoleta.BackColor = System.Drawing.Color.Silver;
+            this.TxtRucBoleta.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.TxtRucBoleta.ForeColor = System.Drawing.Color.Black;
+            this.TxtRucBoleta.Location = new System.Drawing.Point(65, 15);
+            this.TxtRucBoleta.Name = "TxtRucBoleta";
+            this.TxtRucBoleta.Size = new System.Drawing.Size(104, 22);
+            this.TxtRucBoleta.TabIndex = 191;
+            this.TxtRucBoleta.Text = "10726555937";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Roboto", 9.25F);
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.label18.Location = new System.Drawing.Point(333, 16);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(63, 18);
+            this.label18.TabIndex = 181;
+            this.label18.Text = "NUMERO";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Roboto", 9.25F);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.label16.Location = new System.Drawing.Point(193, 15);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(45, 18);
+            this.label16.TabIndex = 180;
+            this.label16.Text = "SERIE";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Roboto", 9.25F);
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.label17.Location = new System.Drawing.Point(6, 16);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(34, 18);
+            this.label17.TabIndex = 179;
+            this.label17.Text = "RUC";
             // 
             // FrmPedidoMesa
             // 
@@ -567,6 +658,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(814, 630);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnRealizarPago);
             this.Controls.Add(this.DgvPedidosMesa);
@@ -593,6 +685,8 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPedidosMesa)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -642,5 +736,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox CmbNumeroPiso;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox TxtNumeroBoleta;
+        private System.Windows.Forms.TextBox TxtSerieBoleta;
+        private System.Windows.Forms.TextBox TxtRucBoleta;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
     }
 }

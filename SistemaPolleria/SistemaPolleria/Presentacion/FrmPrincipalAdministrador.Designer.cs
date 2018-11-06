@@ -36,12 +36,11 @@
             this.LblCargoUsuario = new System.Windows.Forms.Label();
             this.PtbFoto = new System.Windows.Forms.PictureBox();
             this.BtnCompra = new System.Windows.Forms.Button();
-            this.BtnAlumno = new System.Windows.Forms.Button();
+            this.BtnPedidoDelivery = new System.Windows.Forms.Button();
             this.BtnSalirSistema = new System.Windows.Forms.Button();
             this.BtnProducto = new System.Windows.Forms.Button();
             this.BtnKardex = new System.Windows.Forms.Button();
             this.BtnInsumo = new System.Windows.Forms.Button();
-            this.BtnPedidoMesa = new System.Windows.Forms.Button();
             this.PanelPadre = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -53,12 +52,11 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.BtnCompra);
-            this.panel3.Controls.Add(this.BtnAlumno);
+            this.panel3.Controls.Add(this.BtnPedidoDelivery);
             this.panel3.Controls.Add(this.BtnSalirSistema);
             this.panel3.Controls.Add(this.BtnProducto);
             this.panel3.Controls.Add(this.BtnKardex);
             this.panel3.Controls.Add(this.BtnInsumo);
-            this.panel3.Controls.Add(this.BtnPedidoMesa);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -138,22 +136,22 @@
             this.BtnCompra.UseVisualStyleBackColor = false;
             this.BtnCompra.Click += new System.EventHandler(this.BtnCompra_Click);
             // 
-            // BtnAlumno
+            // BtnPedidoDelivery
             // 
-            this.BtnAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.BtnAlumno.FlatAppearance.BorderSize = 0;
-            this.BtnAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAlumno.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAlumno.ForeColor = System.Drawing.Color.White;
-            this.BtnAlumno.Image = ((System.Drawing.Image)(resources.GetObject("BtnAlumno.Image")));
-            this.BtnAlumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAlumno.Location = new System.Drawing.Point(0, 371);
-            this.BtnAlumno.Name = "BtnAlumno";
-            this.BtnAlumno.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnAlumno.Size = new System.Drawing.Size(200, 43);
-            this.BtnAlumno.TabIndex = 4;
-            this.BtnAlumno.Text = "Alumno";
-            this.BtnAlumno.UseVisualStyleBackColor = false;
+            this.BtnPedidoDelivery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.BtnPedidoDelivery.FlatAppearance.BorderSize = 0;
+            this.BtnPedidoDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPedidoDelivery.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPedidoDelivery.ForeColor = System.Drawing.Color.White;
+            this.BtnPedidoDelivery.Image = ((System.Drawing.Image)(resources.GetObject("BtnPedidoDelivery.Image")));
+            this.BtnPedidoDelivery.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnPedidoDelivery.Location = new System.Drawing.Point(0, 126);
+            this.BtnPedidoDelivery.Name = "BtnPedidoDelivery";
+            this.BtnPedidoDelivery.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnPedidoDelivery.Size = new System.Drawing.Size(200, 43);
+            this.BtnPedidoDelivery.TabIndex = 4;
+            this.BtnPedidoDelivery.Text = "Pedido Delivery";
+            this.BtnPedidoDelivery.UseVisualStyleBackColor = false;
             // 
             // BtnSalirSistema
             // 
@@ -229,24 +227,6 @@
             this.BtnInsumo.UseVisualStyleBackColor = false;
             this.BtnInsumo.Click += new System.EventHandler(this.BtnInsumo_Click);
             // 
-            // BtnPedidoMesa
-            // 
-            this.BtnPedidoMesa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.BtnPedidoMesa.FlatAppearance.BorderSize = 0;
-            this.BtnPedidoMesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPedidoMesa.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPedidoMesa.ForeColor = System.Drawing.Color.White;
-            this.BtnPedidoMesa.Image = ((System.Drawing.Image)(resources.GetObject("BtnPedidoMesa.Image")));
-            this.BtnPedidoMesa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnPedidoMesa.Location = new System.Drawing.Point(0, 126);
-            this.BtnPedidoMesa.Name = "BtnPedidoMesa";
-            this.BtnPedidoMesa.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnPedidoMesa.Size = new System.Drawing.Size(200, 43);
-            this.BtnPedidoMesa.TabIndex = 0;
-            this.BtnPedidoMesa.Text = "Pedido a la Mesa";
-            this.BtnPedidoMesa.UseVisualStyleBackColor = false;
-            this.BtnPedidoMesa.Click += new System.EventHandler(this.BtnPedidoMesa_Click);
-            // 
             // PanelPadre
             // 
             this.PanelPadre.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -284,12 +264,11 @@
         private System.Windows.Forms.Label LblCargoUsuario;
         private System.Windows.Forms.PictureBox PtbFoto;
         private System.Windows.Forms.Button BtnCompra;
-        private System.Windows.Forms.Button BtnAlumno;
+        private System.Windows.Forms.Button BtnPedidoDelivery;
         private System.Windows.Forms.Button BtnSalirSistema;
         private System.Windows.Forms.Button BtnProducto;
         private System.Windows.Forms.Button BtnKardex;
         private System.Windows.Forms.Button BtnInsumo;
-        private System.Windows.Forms.Button BtnPedidoMesa;
         private System.Windows.Forms.Panel PanelPadre;
         private System.Windows.Forms.Label LblApellidoUsuario;
     }

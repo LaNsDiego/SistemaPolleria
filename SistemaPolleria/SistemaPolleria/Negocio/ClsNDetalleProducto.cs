@@ -47,5 +47,12 @@ namespace SistemaPolleria.Negocio
         //    parametros[0] = new ClsNSQLParametro(Id, "@Documento", SqlDbType.VarChar);
         //    return ClsNConexion.EjecutarProcedimiento("BuscarDetalleProducto", parametros).Tables[0];
         //}
+
+        public static DataTable ObtenerPorProducto(string ProductoId)
+        {
+            ClsNSQLParametro[] parametros = new ClsNSQLParametro[1];
+            parametros[0] = new ClsNSQLParametro(ProductoId, "@IdProducto", SqlDbType.VarChar);       
+            return ClsNConexion.EjecutarProcedimiento("ObtenerDetallesProducto", parametros).Tables[0];
+        }
     }
 }

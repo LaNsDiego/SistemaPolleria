@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPedido));
             this.DgvPedidosMesa = new System.Windows.Forms.DataGridView();
+            this.IDPRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CANTIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SUBTOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label13 = new System.Windows.Forms.Label();
             this.TxtTotalLiteral = new System.Windows.Forms.TextBox();
             this.TxtTotalNumerico = new System.Windows.Forms.TextBox();
@@ -49,6 +54,7 @@
             this.TxtNombreProducto = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.BtnNuevoCliente = new System.Windows.Forms.Button();
             this.TxtTelefono = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtDocumentoCliente = new System.Windows.Forms.TextBox();
@@ -57,17 +63,15 @@
             this.TxtRazonSocial = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.CmbEstadoPedido = new System.Windows.Forms.ComboBox();
             this.TxtCodigoPedido = new System.Windows.Forms.TextBox();
             this.Codigo = new System.Windows.Forms.Label();
-            this.CmbCodigoMesa = new System.Windows.Forms.ComboBox();
             this.DtpFechaPedido = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.CmbTipoPedido = new System.Windows.Forms.ComboBox();
             this.GpbDatosDelivery = new System.Windows.Forms.GroupBox();
             this.TxtFamiliaDelivery = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -75,24 +79,12 @@
             this.label16 = new System.Windows.Forms.Label();
             this.TxtReferenciaDelivery = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.IDPRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CANTIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SUBTOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label18 = new System.Windows.Forms.Label();
-            this.CmbEstadoPedido = new System.Windows.Forms.ComboBox();
-            this.GpbDatosMesa = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.CmbNumeroPiso = new System.Windows.Forms.ComboBox();
-            this.BtnNuevoCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPedidosMesa)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.GpbDatosDelivery.SuspendLayout();
-            this.GpbDatosMesa.SuspendLayout();
             this.SuspendLayout();
             // 
             // DgvPedidosMesa
@@ -110,6 +102,36 @@
             this.DgvPedidosMesa.ReadOnly = true;
             this.DgvPedidosMesa.Size = new System.Drawing.Size(844, 169);
             this.DgvPedidosMesa.TabIndex = 290;
+            // 
+            // IDPRODUCTO
+            // 
+            this.IDPRODUCTO.HeaderText = "IDPRODUCTO";
+            this.IDPRODUCTO.Name = "IDPRODUCTO";
+            this.IDPRODUCTO.ReadOnly = true;
+            // 
+            // PRODUCTO
+            // 
+            this.PRODUCTO.HeaderText = "PRODUCTO";
+            this.PRODUCTO.Name = "PRODUCTO";
+            this.PRODUCTO.ReadOnly = true;
+            // 
+            // CANTIDAD
+            // 
+            this.CANTIDAD.HeaderText = "CANTIDAD";
+            this.CANTIDAD.Name = "CANTIDAD";
+            this.CANTIDAD.ReadOnly = true;
+            // 
+            // PRECIO
+            // 
+            this.PRECIO.HeaderText = "PRECIO";
+            this.PRECIO.Name = "PRECIO";
+            this.PRECIO.ReadOnly = true;
+            // 
+            // SUBTOTAL
+            // 
+            this.SUBTOTAL.HeaderText = "SUBTOTAL";
+            this.SUBTOTAL.Name = "SUBTOTAL";
+            this.SUBTOTAL.ReadOnly = true;
             // 
             // label13
             // 
@@ -346,6 +368,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Cliente";
             // 
+            // BtnNuevoCliente
+            // 
+            this.BtnNuevoCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.BtnNuevoCliente.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.BtnNuevoCliente.FlatAppearance.BorderSize = 0;
+            this.BtnNuevoCliente.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
+            this.BtnNuevoCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BtnNuevoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnNuevoCliente.ForeColor = System.Drawing.Color.Black;
+            this.BtnNuevoCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnNuevoCliente.Image")));
+            this.BtnNuevoCliente.Location = new System.Drawing.Point(159, 40);
+            this.BtnNuevoCliente.Name = "BtnNuevoCliente";
+            this.BtnNuevoCliente.Size = new System.Drawing.Size(39, 26);
+            this.BtnNuevoCliente.TabIndex = 267;
+            this.BtnNuevoCliente.UseVisualStyleBackColor = false;
+            // 
             // TxtTelefono
             // 
             this.TxtTelefono.BackColor = System.Drawing.Color.White;
@@ -429,8 +467,6 @@
             // 
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.CmbEstadoPedido);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.CmbTipoPedido);
             this.groupBox1.Controls.Add(this.TxtCodigoPedido);
             this.groupBox1.Controls.Add(this.Codigo);
             this.groupBox1.Controls.Add(this.DtpFechaPedido);
@@ -444,16 +480,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Pedido";
             // 
-            // label2
+            // label18
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(10, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 17);
-            this.label2.TabIndex = 254;
-            this.label2.Text = "Numero de Piso";
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label18.ForeColor = System.Drawing.Color.Gray;
+            this.label18.Location = new System.Drawing.Point(301, 24);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(52, 17);
+            this.label18.TabIndex = 293;
+            this.label18.Text = "Estado";
+            // 
+            // CmbEstadoPedido
+            // 
+            this.CmbEstadoPedido.Font = new System.Drawing.Font("Roboto", 10.25F);
+            this.CmbEstadoPedido.ForeColor = System.Drawing.Color.Gray;
+            this.CmbEstadoPedido.FormattingEnabled = true;
+            this.CmbEstadoPedido.Items.AddRange(new object[] {
+            "Atendido",
+            "En espera",
+            "Cancelado"});
+            this.CmbEstadoPedido.Location = new System.Drawing.Point(304, 44);
+            this.CmbEstadoPedido.Name = "CmbEstadoPedido";
+            this.CmbEstadoPedido.Size = new System.Drawing.Size(123, 27);
+            this.CmbEstadoPedido.TabIndex = 294;
             // 
             // TxtCodigoPedido
             // 
@@ -476,21 +526,11 @@
             this.Codigo.TabIndex = 249;
             this.Codigo.Text = "Codigo";
             // 
-            // CmbCodigoMesa
-            // 
-            this.CmbCodigoMesa.Font = new System.Drawing.Font("Roboto", 10.25F);
-            this.CmbCodigoMesa.ForeColor = System.Drawing.Color.Gray;
-            this.CmbCodigoMesa.FormattingEnabled = true;
-            this.CmbCodigoMesa.Location = new System.Drawing.Point(13, 120);
-            this.CmbCodigoMesa.Name = "CmbCodigoMesa";
-            this.CmbCodigoMesa.Size = new System.Drawing.Size(156, 27);
-            this.CmbCodigoMesa.TabIndex = 255;
-            // 
             // DtpFechaPedido
             // 
             this.DtpFechaPedido.Font = new System.Drawing.Font("Roboto", 10.25F);
             this.DtpFechaPedido.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpFechaPedido.Location = new System.Drawing.Point(301, 44);
+            this.DtpFechaPedido.Location = new System.Drawing.Point(163, 45);
             this.DtpFechaPedido.Name = "DtpFechaPedido";
             this.DtpFechaPedido.Size = new System.Drawing.Size(121, 26);
             this.DtpFechaPedido.TabIndex = 256;
@@ -500,7 +540,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(298, 23);
+            this.label3.Location = new System.Drawing.Point(160, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 17);
             this.label3.TabIndex = 257;
@@ -550,30 +590,8 @@
             this.BtnGuardar.UseVisualStyleBackColor = false;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(162, 23);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 17);
-            this.label7.TabIndex = 291;
-            this.label7.Text = "Tipo";
-            // 
-            // CmbTipoPedido
-            // 
-            this.CmbTipoPedido.Font = new System.Drawing.Font("Roboto", 10.25F);
-            this.CmbTipoPedido.ForeColor = System.Drawing.Color.Gray;
-            this.CmbTipoPedido.FormattingEnabled = true;
-            this.CmbTipoPedido.Location = new System.Drawing.Point(165, 43);
-            this.CmbTipoPedido.Name = "CmbTipoPedido";
-            this.CmbTipoPedido.Size = new System.Drawing.Size(123, 27);
-            this.CmbTipoPedido.TabIndex = 292;
-            // 
             // GpbDatosDelivery
             // 
-            this.GpbDatosDelivery.Controls.Add(this.GpbDatosMesa);
             this.GpbDatosDelivery.Controls.Add(this.TxtFamiliaDelivery);
             this.GpbDatosDelivery.Controls.Add(this.label15);
             this.GpbDatosDelivery.Controls.Add(this.TxtDireccionDelivery);
@@ -653,113 +671,6 @@
             this.label17.TabIndex = 264;
             this.label17.Text = "Referencia";
             // 
-            // IDPRODUCTO
-            // 
-            this.IDPRODUCTO.HeaderText = "IDPRODUCTO";
-            this.IDPRODUCTO.Name = "IDPRODUCTO";
-            this.IDPRODUCTO.ReadOnly = true;
-            // 
-            // PRODUCTO
-            // 
-            this.PRODUCTO.HeaderText = "PRODUCTO";
-            this.PRODUCTO.Name = "PRODUCTO";
-            this.PRODUCTO.ReadOnly = true;
-            // 
-            // CANTIDAD
-            // 
-            this.CANTIDAD.HeaderText = "CANTIDAD";
-            this.CANTIDAD.Name = "CANTIDAD";
-            this.CANTIDAD.ReadOnly = true;
-            // 
-            // PRECIO
-            // 
-            this.PRECIO.HeaderText = "PRECIO";
-            this.PRECIO.Name = "PRECIO";
-            this.PRECIO.ReadOnly = true;
-            // 
-            // SUBTOTAL
-            // 
-            this.SUBTOTAL.HeaderText = "SUBTOTAL";
-            this.SUBTOTAL.Name = "SUBTOTAL";
-            this.SUBTOTAL.ReadOnly = true;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label18.ForeColor = System.Drawing.Color.Gray;
-            this.label18.Location = new System.Drawing.Point(439, 23);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(52, 17);
-            this.label18.TabIndex = 293;
-            this.label18.Text = "Estado";
-            // 
-            // CmbEstadoPedido
-            // 
-            this.CmbEstadoPedido.Font = new System.Drawing.Font("Roboto", 10.25F);
-            this.CmbEstadoPedido.ForeColor = System.Drawing.Color.Gray;
-            this.CmbEstadoPedido.FormattingEnabled = true;
-            this.CmbEstadoPedido.Items.AddRange(new object[] {
-            "Atendido",
-            "En espera",
-            "Cancelado"});
-            this.CmbEstadoPedido.Location = new System.Drawing.Point(442, 43);
-            this.CmbEstadoPedido.Name = "CmbEstadoPedido";
-            this.CmbEstadoPedido.Size = new System.Drawing.Size(123, 27);
-            this.CmbEstadoPedido.TabIndex = 294;
-            // 
-            // GpbDatosMesa
-            // 
-            this.GpbDatosMesa.Controls.Add(this.label12);
-            this.GpbDatosMesa.Controls.Add(this.CmbNumeroPiso);
-            this.GpbDatosMesa.Controls.Add(this.label2);
-            this.GpbDatosMesa.Controls.Add(this.CmbCodigoMesa);
-            this.GpbDatosMesa.Font = new System.Drawing.Font("Roboto", 10.25F);
-            this.GpbDatosMesa.ForeColor = System.Drawing.Color.Gray;
-            this.GpbDatosMesa.Location = new System.Drawing.Point(0, 0);
-            this.GpbDatosMesa.Name = "GpbDatosMesa";
-            this.GpbDatosMesa.Size = new System.Drawing.Size(237, 251);
-            this.GpbDatosMesa.TabIndex = 285;
-            this.GpbDatosMesa.TabStop = false;
-            this.GpbDatosMesa.Text = "Datos de la Mesa";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(10, 100);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 17);
-            this.label12.TabIndex = 256;
-            this.label12.Text = "Codigo de Mesa";
-            // 
-            // CmbNumeroPiso
-            // 
-            this.CmbNumeroPiso.Font = new System.Drawing.Font("Roboto", 10.25F);
-            this.CmbNumeroPiso.ForeColor = System.Drawing.Color.Gray;
-            this.CmbNumeroPiso.FormattingEnabled = true;
-            this.CmbNumeroPiso.Location = new System.Drawing.Point(13, 49);
-            this.CmbNumeroPiso.Name = "CmbNumeroPiso";
-            this.CmbNumeroPiso.Size = new System.Drawing.Size(156, 27);
-            this.CmbNumeroPiso.TabIndex = 257;
-            // 
-            // BtnNuevoCliente
-            // 
-            this.BtnNuevoCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.BtnNuevoCliente.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.BtnNuevoCliente.FlatAppearance.BorderSize = 0;
-            this.BtnNuevoCliente.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
-            this.BtnNuevoCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.BtnNuevoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnNuevoCliente.ForeColor = System.Drawing.Color.Black;
-            this.BtnNuevoCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnNuevoCliente.Image")));
-            this.BtnNuevoCliente.Location = new System.Drawing.Point(159, 40);
-            this.BtnNuevoCliente.Name = "BtnNuevoCliente";
-            this.BtnNuevoCliente.Size = new System.Drawing.Size(39, 26);
-            this.BtnNuevoCliente.TabIndex = 267;
-            this.BtnNuevoCliente.UseVisualStyleBackColor = false;
-            // 
             // FrmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -792,8 +703,6 @@
             this.groupBox1.PerformLayout();
             this.GpbDatosDelivery.ResumeLayout(false);
             this.GpbDatosDelivery.PerformLayout();
-            this.GpbDatosMesa.ResumeLayout(false);
-            this.GpbDatosMesa.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -829,17 +738,13 @@
         private System.Windows.Forms.TextBox TxtRazonSocial;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtCodigoPedido;
         private System.Windows.Forms.Label Codigo;
-        private System.Windows.Forms.ComboBox CmbCodigoMesa;
         private System.Windows.Forms.DateTimePicker DtpFechaPedido;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnNuevo;
         private System.Windows.Forms.Button BtnGuardar;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox CmbTipoPedido;
         private System.Windows.Forms.GroupBox GpbDatosDelivery;
         private System.Windows.Forms.TextBox TxtFamiliaDelivery;
         private System.Windows.Forms.Label label15;
@@ -854,9 +759,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SUBTOTAL;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox CmbEstadoPedido;
-        private System.Windows.Forms.GroupBox GpbDatosMesa;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox CmbNumeroPiso;
         private System.Windows.Forms.Button BtnNuevoCliente;
     }
 }

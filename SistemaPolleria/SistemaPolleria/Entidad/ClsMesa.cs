@@ -8,8 +8,8 @@ namespace SistemaPolleria.Entidad
 {
     class ClsMesa
     {
-        public int Id { get; private set; }
-        public int Estado { get; private set; }
-        public int Asientos { get; private set; }
+        public string Id { get; private set; }
+        public int Sillas { get; private set; }
+        public int Piso { get; private set; }
     }
 }

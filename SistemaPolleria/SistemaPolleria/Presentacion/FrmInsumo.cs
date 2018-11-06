@@ -15,7 +15,7 @@ namespace SistemaPolleria.Presentacion
 {
     public partial class FrmInsumo : Form
     {
-        bool GuardarOActualizar;
+        bool EsNuevoInsumo;
         public FrmInsumo()
         {
             InitializeComponent();
@@ -25,6 +25,17 @@ namespace SistemaPolleria.Presentacion
         private void GenerarId()
         {
             TxtCodigo.Text = ClsNInsumo.GenerarId();
+        }
+
+        private void LimpiarControles()
+        {
+            List<Control> Lista = new List<Control>
+            {
+                TxtCodigo,
+                TxtNombre,
+                CmbUnidadMedida
+            };
+            ClsNUI.LimpiarControles(Lista);
         }
 
         private void AjustarEstadoControles(bool disponibilidad)
@@ -70,7 +81,9 @@ namespace SistemaPolleria.Presentacion
                 InsumosId[CmbUnidadMedida.SelectedIndex]
             );
 
-            ClsNInsumo.Guardar(Insumo,true);
+            ClsNInsumo.Guardar(Insumo,EsNuevoInsumo);
+            AjustarEstadoControles(false);
+            LimpiarControles();
             ListarInsumo();
         }
 
@@ -90,11 +103,30 @@ namespace SistemaPolleria.Presentacion
 
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
+            EsNuevoInsumo = true;
             AjustarEstadoControlesParaNuevo();
+            LimpiarControles();
             TxtCantidad.Text = "0";
             TxtCostoUnitario.Text = "0";
             TxtCostoTotal.Text = "0";
             GenerarId();
+        }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            CmbUnidadMedida.Enabled = true;
+            TxtNombre.Enabled = true;
+            BtnGuardar.Enabled = true;
+            
+        }
+
+        private void DgvInsumo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TxtCodigo.Text = DgvInsumo.CurrentRow.Cells["Id"].Value.ToString();
+            TxtNombre.Text = DgvInsumo.CurrentRow.Cells["Nombre"].Value.ToString();
+            TxtCostoUnitario.Text = DgvInsumo.CurrentRow.Cells["CostoUnitario"].Value.ToString();
+            TxtCostoTotal.Text = DgvInsumo.CurrentRow.Cells["CostoTotal"].Value.ToString();
+            TxtCantidad.Text = DgvInsumo.CurrentRow.Cells["Cantidad"].Value.ToString();
         }
     }
 }
