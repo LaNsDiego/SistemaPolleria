@@ -13,7 +13,7 @@ namespace SistemaPolleria.Negocio
     public abstract class ClsNConexion
     {
         //private static readonly string conex = "Server=AEPIS28;Database=POLLERIA;Integrated Security=true";
-        private static readonly string conex = "Server=.\\SQLEXPRESS2017;Database=POLLERIA;Integrated Security=true";
+        public static readonly string conex = "Server=.\\SQLEXPRESS2017;Database=POLLERIA;Integrated Security=true";
         private static SqlConnection conexion = new SqlConnection(conex);
         private ClsNConexion()
         {

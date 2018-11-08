@@ -100,5 +100,23 @@ namespace SistemaPolleria.Presentacion
             FrmReporteKardexEntrada frm = new FrmReporteKardexEntrada();
             AbrirFormHijo(frm);
         }
+
+        private void BtnPlanilla_Click(object sender, EventArgs e)
+        {
+            FrmPlanilla frm = new FrmPlanilla();
+            AbrirFormHijo(frm);
+        }
+
+        private void BtnAsistencia_Click(object sender, EventArgs e)
+        {
+            FrmAsistencia frm = new FrmAsistencia();
+            AbrirFormHijo(frm);
+        }
+
+        private void BtnInventario_Click(object sender, EventArgs e)
+        {
+            FrmInventario frm = new FrmInventario();
+            AbrirFormHijo(frm);
+        }
     }
 }
