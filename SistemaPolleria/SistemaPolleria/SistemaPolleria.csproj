@@ -99,6 +99,11 @@
     <Compile Include="Negocio\ClsNTipoProducto.cs" />
     <Compile Include="Negocio\ClsNUnidadMedida.cs" />
     <Compile Include="Negocio\ClsNUsuario.cs" />
+    <Compile Include="POLLERIADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POLLERIADataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmAsistencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +206,12 @@
     <Compile Include="Presentacion\FrmProducto.Designer.cs">
       <DependentUpon>FrmProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FrmReporteKardexSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmReporteKardexSalida.Designer.cs">
+      <DependentUpon>FrmReporteKardexSalida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +272,9 @@
     <EmbeddedResource Include="Presentacion\FrmProducto.resx">
       <DependentUpon>FrmProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmReporteKardexSalida.resx">
+      <DependentUpon>FrmReporteKardexSalida.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,8 +287,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Reportes\ReporteVenta.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteEntradas.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteSalidas.rdlc" />
     <None Include="packages.config" />
+    <None Include="POLLERIADataSet.xsc">
+      <DependentUpon>POLLERIADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="POLLERIADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>POLLERIADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="POLLERIADataSet.xss">
+      <DependentUpon>POLLERIADataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

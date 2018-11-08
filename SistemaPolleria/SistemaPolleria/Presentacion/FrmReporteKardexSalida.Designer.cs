@@ -1,6 +1,6 @@
 ﻿namespace SistemaPolleria.Presentacion
 {
-    partial class FrmReporteKardexEntrada
+    partial class FrmReporteKardexSalida
     {
         /// <summary>
         /// Required designer variable.
@@ -30,23 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.totalEntradasAgrupadoPorInsumoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TotalSalidasAgrupadoPorInsumoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pOLLERIADataSet = new SistemaPolleria.POLLERIADataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.pOLLERIADataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BtnBuscarPorFechas = new System.Windows.Forms.Button();
             this.DtpFechaFinal = new System.Windows.Forms.DateTimePicker();
             this.DtpFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.totalEntradasAgrupadoPorInsumoTableAdapter = new SistemaPolleria.POLLERIADataSetTableAdapters.TotalEntradasAgrupadoPorInsumoTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.totalEntradasAgrupadoPorInsumoBindingSource)).BeginInit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalSalidasAgrupadoPorInsumoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pOLLERIADataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pOLLERIADataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // totalEntradasAgrupadoPorInsumoBindingSource
+            // TotalSalidasAgrupadoPorInsumoBindingSource
             // 
-            this.totalEntradasAgrupadoPorInsumoBindingSource.DataMember = "TotalEntradasAgrupadoPorInsumo";
-            this.totalEntradasAgrupadoPorInsumoBindingSource.DataSource = this.pOLLERIADataSet;
+            this.TotalSalidasAgrupadoPorInsumoBindingSource.DataMember = "TotalSalidasAgrupadoPorInsumo";
+            this.TotalSalidasAgrupadoPorInsumoBindingSource.DataSource = this.pOLLERIADataSet;
             // 
             // pOLLERIADataSet
             // 
@@ -55,37 +56,20 @@
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSetKardexEntradaPorInsumo";
-            reportDataSource1.Value = this.totalEntradasAgrupadoPorInsumoBindingSource;
+            reportDataSource1.Name = "DataSetSalidasPorInsumo";
+            reportDataSource1.Value = this.TotalSalidasAgrupadoPorInsumoBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SistemaPolleria.Reportes.ReporteEntradas.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(21, 88);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SistemaPolleria.Reportes.ReporteSalidas.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(48, 90);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(711, 486);
+            this.reportViewer1.Size = new System.Drawing.Size(643, 406);
             this.reportViewer1.TabIndex = 0;
             // 
-            // label1
+            // pOLLERIADataSetBindingSource
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 10.25F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.label1.Location = new System.Drawing.Point(259, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 19);
-            this.label1.TabIndex = 258;
-            this.label1.Text = "Hasta";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto", 10.25F);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.label6.Location = new System.Drawing.Point(43, 17);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 19);
-            this.label6.TabIndex = 257;
-            this.label6.Text = "Desde";
+            this.pOLLERIADataSetBindingSource.DataSource = this.pOLLERIADataSet;
+            this.pOLLERIADataSetBindingSource.Position = 0;
             // 
             // BtnBuscarPorFechas
             // 
@@ -94,37 +78,55 @@
             this.BtnBuscarPorFechas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscarPorFechas.Font = new System.Drawing.Font("Roboto", 11.25F);
             this.BtnBuscarPorFechas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnBuscarPorFechas.Location = new System.Drawing.Point(508, 28);
+            this.BtnBuscarPorFechas.Location = new System.Drawing.Point(509, 33);
             this.BtnBuscarPorFechas.Name = "BtnBuscarPorFechas";
             this.BtnBuscarPorFechas.Size = new System.Drawing.Size(182, 44);
-            this.BtnBuscarPorFechas.TabIndex = 256;
+            this.BtnBuscarPorFechas.TabIndex = 5;
             this.BtnBuscarPorFechas.Text = "BUSCAR";
             this.BtnBuscarPorFechas.UseVisualStyleBackColor = false;
-            this.BtnBuscarPorFechas.Click += new System.EventHandler(this.BtnBuscarPorFechas_Click_1);
+            this.BtnBuscarPorFechas.Click += new System.EventHandler(this.BtnBuscarPorFechas_Click);
             // 
             // DtpFechaFinal
             // 
-            this.DtpFechaFinal.Location = new System.Drawing.Point(263, 39);
+            this.DtpFechaFinal.Location = new System.Drawing.Point(264, 44);
             this.DtpFechaFinal.Name = "DtpFechaFinal";
             this.DtpFechaFinal.Size = new System.Drawing.Size(200, 20);
-            this.DtpFechaFinal.TabIndex = 255;
+            this.DtpFechaFinal.TabIndex = 4;
             // 
             // DtpFechaInicio
             // 
-            this.DtpFechaInicio.Location = new System.Drawing.Point(47, 39);
+            this.DtpFechaInicio.Location = new System.Drawing.Point(48, 44);
             this.DtpFechaInicio.Name = "DtpFechaInicio";
             this.DtpFechaInicio.Size = new System.Drawing.Size(200, 20);
-            this.DtpFechaInicio.TabIndex = 254;
+            this.DtpFechaInicio.TabIndex = 3;
             // 
-            // totalEntradasAgrupadoPorInsumoTableAdapter
+            // label6
             // 
-            this.totalEntradasAgrupadoPorInsumoTableAdapter.ClearBeforeFill = true;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Roboto", 10.25F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.label6.Location = new System.Drawing.Point(44, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 19);
+            this.label6.TabIndex = 252;
+            this.label6.Text = "Desde";
             // 
-            // FrmReporteKardexEntrada
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 10.25F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.label1.Location = new System.Drawing.Point(260, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 19);
+            this.label1.TabIndex = 253;
+            this.label1.Text = "Hasta";
+            // 
+            // FrmReporteKardexSalida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 604);
+            this.ClientSize = new System.Drawing.Size(758, 525);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnBuscarPorFechas);
@@ -132,11 +134,12 @@
             this.Controls.Add(this.DtpFechaInicio);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmReporteKardexEntrada";
-            this.Text = "FrmReporteKardexEntrada";
-            this.Load += new System.EventHandler(this.FrmReporteKardexEntrada_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.totalEntradasAgrupadoPorInsumoBindingSource)).EndInit();
+            this.Name = "FrmReporteKardexSalida";
+            this.Text = "FrmReporteKardexSalida";
+            this.Load += new System.EventHandler(this.FrmReporteKardexSalida_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.TotalSalidasAgrupadoPorInsumoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pOLLERIADataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pOLLERIADataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,13 +148,13 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.BindingSource TotalSalidasAgrupadoPorInsumoBindingSource;
+        private POLLERIADataSet pOLLERIADataSet;
+        private System.Windows.Forms.BindingSource pOLLERIADataSetBindingSource;
         private System.Windows.Forms.Button BtnBuscarPorFechas;
         private System.Windows.Forms.DateTimePicker DtpFechaFinal;
         private System.Windows.Forms.DateTimePicker DtpFechaInicio;
-        private System.Windows.Forms.BindingSource totalEntradasAgrupadoPorInsumoBindingSource;
-        private POLLERIADataSet pOLLERIADataSet;
-        private POLLERIADataSetTableAdapters.TotalEntradasAgrupadoPorInsumoTableAdapter totalEntradasAgrupadoPorInsumoTableAdapter;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label1;
     }
 }

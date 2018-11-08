@@ -52,6 +52,28 @@ namespace SistemaPolleria.Presentacion
             };
             ClsNUI.AjustarEstadoControles(Lista, disponibilidad);
         }
+        private void LimpiarControles()
+        {
+            List<Control> Lista = new List<Control>
+            {
+                CmbTipoComprobante,
+                TxtObservacion,
+                DtpFecha,
+                TxtCodigoProveedor,
+                TxtRazonSocialProveedor,
+                TxtRuc,
+                TxtIdInsumo,
+                TxtNombreInsumo,
+                TxtCantidadCompra,
+                TxtCostoUnitario,
+                TxtTotalNumerico,
+                TxtTotalLiteral,
+                TxtValorIgv
+
+
+            };
+            ClsNUI.LimpiarControles(Lista);
+        }
 
         private void CalcularTotal()
         {
@@ -184,6 +206,9 @@ namespace SistemaPolleria.Presentacion
                 ClsNDetalleKardex.Guardar(DetalleKardex);
                 ClsNInsumo.Entrada(DetalleCompra);
             }
+
+            LimpiarControles();
+            AjustarControles(false);
         }
 
         private void BtnNuevo_Click(object sender, EventArgs e)

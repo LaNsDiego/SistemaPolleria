@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipalAdministrador));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.BtnKardexSalida = new System.Windows.Forms.Button();
+            this.BtnReporteKardexEntrada = new System.Windows.Forms.Button();
+            this.BtnListaPedido = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.LblApellidoUsuario = new System.Windows.Forms.Label();
             this.LblNombreUsuario = new System.Windows.Forms.Label();
@@ -42,7 +45,6 @@
             this.BtnKardex = new System.Windows.Forms.Button();
             this.BtnInsumo = new System.Windows.Forms.Button();
             this.PanelPadre = new System.Windows.Forms.Panel();
-            this.BtnListaPedido = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PtbFoto)).BeginInit();
@@ -51,6 +53,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.panel3.Controls.Add(this.BtnKardexSalida);
+            this.panel3.Controls.Add(this.BtnReporteKardexEntrada);
             this.panel3.Controls.Add(this.BtnListaPedido);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.BtnCompra);
@@ -64,6 +68,58 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 700);
             this.panel3.TabIndex = 4;
+            // 
+            // BtnKardexSalida
+            // 
+            this.BtnKardexSalida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.BtnKardexSalida.FlatAppearance.BorderSize = 0;
+            this.BtnKardexSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnKardexSalida.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnKardexSalida.ForeColor = System.Drawing.Color.White;
+            this.BtnKardexSalida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnKardexSalida.Location = new System.Drawing.Point(0, 492);
+            this.BtnKardexSalida.Name = "BtnKardexSalida";
+            this.BtnKardexSalida.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnKardexSalida.Size = new System.Drawing.Size(200, 43);
+            this.BtnKardexSalida.TabIndex = 9;
+            this.BtnKardexSalida.Text = "Reporte Kardex Salida";
+            this.BtnKardexSalida.UseVisualStyleBackColor = false;
+            this.BtnKardexSalida.Click += new System.EventHandler(this.BtnKardexSalida_Click);
+            // 
+            // BtnReporteKardexEntrada
+            // 
+            this.BtnReporteKardexEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.BtnReporteKardexEntrada.FlatAppearance.BorderSize = 0;
+            this.BtnReporteKardexEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnReporteKardexEntrada.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReporteKardexEntrada.ForeColor = System.Drawing.Color.White;
+            this.BtnReporteKardexEntrada.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnReporteKardexEntrada.Location = new System.Drawing.Point(0, 443);
+            this.BtnReporteKardexEntrada.Name = "BtnReporteKardexEntrada";
+            this.BtnReporteKardexEntrada.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnReporteKardexEntrada.Size = new System.Drawing.Size(200, 43);
+            this.BtnReporteKardexEntrada.TabIndex = 8;
+            this.BtnReporteKardexEntrada.Text = "Reporte Kardex Entrada";
+            this.BtnReporteKardexEntrada.UseVisualStyleBackColor = false;
+            this.BtnReporteKardexEntrada.Click += new System.EventHandler(this.BtnReporteKardexEntrada_Click);
+            // 
+            // BtnListaPedido
+            // 
+            this.BtnListaPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.BtnListaPedido.FlatAppearance.BorderSize = 0;
+            this.BtnListaPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnListaPedido.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnListaPedido.ForeColor = System.Drawing.Color.White;
+            this.BtnListaPedido.Image = ((System.Drawing.Image)(resources.GetObject("BtnListaPedido.Image")));
+            this.BtnListaPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnListaPedido.Location = new System.Drawing.Point(0, 371);
+            this.BtnListaPedido.Name = "BtnListaPedido";
+            this.BtnListaPedido.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnListaPedido.Size = new System.Drawing.Size(200, 43);
+            this.BtnListaPedido.TabIndex = 7;
+            this.BtnListaPedido.Text = "Lista Pedidos";
+            this.BtnListaPedido.UseVisualStyleBackColor = false;
+            this.BtnListaPedido.Click += new System.EventHandler(this.BtnListaPedido_Click);
             // 
             // panel2
             // 
@@ -238,24 +294,6 @@
             this.PanelPadre.Size = new System.Drawing.Size(735, 700);
             this.PanelPadre.TabIndex = 5;
             // 
-            // BtnListaPedido
-            // 
-            this.BtnListaPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.BtnListaPedido.FlatAppearance.BorderSize = 0;
-            this.BtnListaPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnListaPedido.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnListaPedido.ForeColor = System.Drawing.Color.White;
-            this.BtnListaPedido.Image = ((System.Drawing.Image)(resources.GetObject("BtnListaPedido.Image")));
-            this.BtnListaPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnListaPedido.Location = new System.Drawing.Point(0, 371);
-            this.BtnListaPedido.Name = "BtnListaPedido";
-            this.BtnListaPedido.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnListaPedido.Size = new System.Drawing.Size(200, 43);
-            this.BtnListaPedido.TabIndex = 7;
-            this.BtnListaPedido.Text = "Lista Pedidos";
-            this.BtnListaPedido.UseVisualStyleBackColor = false;
-            this.BtnListaPedido.Click += new System.EventHandler(this.BtnListaPedido_Click);
-            // 
             // FrmPrincipalAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,5 +331,7 @@
         private System.Windows.Forms.Panel PanelPadre;
         private System.Windows.Forms.Label LblApellidoUsuario;
         private System.Windows.Forms.Button BtnListaPedido;
+        private System.Windows.Forms.Button BtnReporteKardexEntrada;
+        private System.Windows.Forms.Button BtnKardexSalida;
     }
 }

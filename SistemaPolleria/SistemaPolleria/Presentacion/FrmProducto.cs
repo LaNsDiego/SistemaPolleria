@@ -58,6 +58,7 @@ namespace SistemaPolleria.Presentacion
                TxtNombreInsumo,
                TxtCantidadUso,
                TxtUnidadMedida
+               
             };
             ClsNUI.LimpiarControles(Lista);
         }
@@ -86,6 +87,7 @@ namespace SistemaPolleria.Presentacion
             }
             DgvProducto.DataSource = ClsNProducto.Listar();
             LimpiarControles();
+            DgvDetalleProducto.Rows.Clear();
             AjustarControles(false);
         }
 

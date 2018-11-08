@@ -28,6 +28,23 @@ namespace SistemaPolleria.Presentacion
             InitializeComponent();
         }
 
+        private void LimpiarControles()
+        {
+            DgvPedidosMesa.Rows.Clear();
+            List<Control> Lista = new List<Control>
+            {
+                TxtIdPedido,
+                CmbTipoComprobante,
+                DtpFechaPedido,
+                TxtCodigoProducto,
+                TxtNombreProducto,
+                TxtPrecioUnitario,
+                TxtCantidadCompra,
+                TxtStockProducto
+            };
+            ClsNUI.LimpiarControles(Lista);
+        }
+
 
         public void MostarMesas()
         {
@@ -295,7 +312,7 @@ namespace SistemaPolleria.Presentacion
                     }
                     
                 }
-                //LimpiarControles();
+                LimpiarControles();
                 AjustarControles(false);
                 TxtTotalLiteral.Text = string.Empty;
                 TxtTotalNumerico.Text = 0.ToString();

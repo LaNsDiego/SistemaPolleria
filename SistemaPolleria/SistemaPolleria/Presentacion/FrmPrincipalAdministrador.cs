@@ -88,5 +88,17 @@ namespace SistemaPolleria.Presentacion
             FrmListaPedido frm = new FrmListaPedido();
             AbrirFormHijo(frm);
         }
+
+        private void BtnKardexSalida_Click(object sender, EventArgs e)
+        {
+            FrmReporteKardexSalida frm = new FrmReporteKardexSalida();
+            AbrirFormHijo(frm);
+        }
+
+        private void BtnReporteKardexEntrada_Click(object sender, EventArgs e)
+        {
+            FrmReporteKardexEntrada frm = new FrmReporteKardexEntrada();
+            AbrirFormHijo(frm);
+        }
     }
 }
