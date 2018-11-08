@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Codigo = new System.Windows.Forms.Label();
-            this.TxtCodigoPedido = new System.Windows.Forms.TextBox();
+            this.TxtIdPedido = new System.Windows.Forms.TextBox();
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.DtpFechaPedido = new System.Windows.Forms.DateTimePicker();
@@ -43,6 +43,8 @@
             this.RdnEstadoEspera = new System.Windows.Forms.RadioButton();
             this.RdnEstadoAtendido = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.CmbTipoComprobante = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.CmbNumeroPiso = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -69,15 +71,12 @@
             this.CANTIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IMPORTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnRealizarPago = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.TxtNumeroBoleta = new System.Windows.Forms.TextBox();
-            this.TxtSerieBoleta = new System.Windows.Forms.TextBox();
-            this.TxtRucBoleta = new System.Windows.Forms.TextBox();
+            this.CmbSerie = new System.Windows.Forms.ComboBox();
+            this.TxtNumero = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.GpbEstado.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -91,17 +90,18 @@
             this.CmbCodigoMesa.Font = new System.Drawing.Font("Roboto", 10.25F);
             this.CmbCodigoMesa.ForeColor = System.Drawing.Color.Gray;
             this.CmbCodigoMesa.FormattingEnabled = true;
-            this.CmbCodigoMesa.Location = new System.Drawing.Point(253, 43);
+            this.CmbCodigoMesa.Location = new System.Drawing.Point(158, 93);
             this.CmbCodigoMesa.Name = "CmbCodigoMesa";
             this.CmbCodigoMesa.Size = new System.Drawing.Size(109, 27);
             this.CmbCodigoMesa.TabIndex = 255;
+            this.CmbCodigoMesa.SelectedIndexChanged += new System.EventHandler(this.CmbCodigoMesa_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(250, 23);
+            this.label2.Location = new System.Drawing.Point(155, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 17);
             this.label2.TabIndex = 254;
@@ -112,7 +112,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Roboto", 15.25F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.label6.Location = new System.Drawing.Point(23, 9);
+            this.label6.Location = new System.Drawing.Point(12, 19);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(252, 28);
             this.label6.TabIndex = 251;
@@ -129,15 +129,15 @@
             this.Codigo.TabIndex = 249;
             this.Codigo.Text = "Codigo de Pedido";
             // 
-            // TxtCodigoPedido
+            // TxtIdPedido
             // 
-            this.TxtCodigoPedido.BackColor = System.Drawing.Color.White;
-            this.TxtCodigoPedido.Font = new System.Drawing.Font("Roboto", 10.25F);
-            this.TxtCodigoPedido.ForeColor = System.Drawing.Color.Black;
-            this.TxtCodigoPedido.Location = new System.Drawing.Point(7, 44);
-            this.TxtCodigoPedido.Name = "TxtCodigoPedido";
-            this.TxtCodigoPedido.Size = new System.Drawing.Size(117, 26);
-            this.TxtCodigoPedido.TabIndex = 248;
+            this.TxtIdPedido.BackColor = System.Drawing.Color.White;
+            this.TxtIdPedido.Font = new System.Drawing.Font("Roboto", 10.25F);
+            this.TxtIdPedido.ForeColor = System.Drawing.Color.Black;
+            this.TxtIdPedido.Location = new System.Drawing.Point(7, 44);
+            this.TxtIdPedido.Name = "TxtIdPedido";
+            this.TxtIdPedido.Size = new System.Drawing.Size(117, 26);
+            this.TxtIdPedido.TabIndex = 248;
             // 
             // BtnNuevo
             // 
@@ -148,7 +148,7 @@
             this.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnNuevo.Font = new System.Drawing.Font("Roboto", 10F);
             this.BtnNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnNuevo.Location = new System.Drawing.Point(675, 575);
+            this.BtnNuevo.Location = new System.Drawing.Point(675, 623);
             this.BtnNuevo.Name = "BtnNuevo";
             this.BtnNuevo.Size = new System.Drawing.Size(127, 32);
             this.BtnNuevo.TabIndex = 247;
@@ -165,7 +165,7 @@
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.Font = new System.Drawing.Font("Roboto", 10F);
             this.BtnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnGuardar.Location = new System.Drawing.Point(542, 575);
+            this.BtnGuardar.Location = new System.Drawing.Point(542, 623);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(127, 32);
             this.BtnGuardar.TabIndex = 245;
@@ -200,7 +200,7 @@
             this.GpbEstado.Controls.Add(this.RdnEstadoAtendido);
             this.GpbEstado.Font = new System.Drawing.Font("Roboto", 10.25F);
             this.GpbEstado.ForeColor = System.Drawing.Color.Gray;
-            this.GpbEstado.Location = new System.Drawing.Point(487, 16);
+            this.GpbEstado.Location = new System.Drawing.Point(503, 17);
             this.GpbEstado.Name = "GpbEstado";
             this.GpbEstado.Size = new System.Drawing.Size(281, 54);
             this.GpbEstado.TabIndex = 269;
@@ -242,30 +242,53 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.CmbTipoComprobante);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.CmbNumeroPiso);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.GpbEstado);
-            this.groupBox1.Controls.Add(this.TxtCodigoPedido);
+            this.groupBox1.Controls.Add(this.TxtIdPedido);
             this.groupBox1.Controls.Add(this.Codigo);
             this.groupBox1.Controls.Add(this.CmbCodigoMesa);
             this.groupBox1.Controls.Add(this.DtpFechaPedido);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Roboto", 10.25F);
             this.groupBox1.ForeColor = System.Drawing.Color.Gray;
-            this.groupBox1.Location = new System.Drawing.Point(12, 50);
+            this.groupBox1.Location = new System.Drawing.Point(12, 61);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(790, 86);
+            this.groupBox1.Size = new System.Drawing.Size(790, 133);
             this.groupBox1.TabIndex = 270;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Pedido";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label5.ForeColor = System.Drawing.Color.Gray;
+            this.label5.Location = new System.Drawing.Point(157, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(145, 17);
+            this.label5.TabIndex = 272;
+            this.label5.Text = "Tipo de Comprobante";
+            // 
+            // CmbTipoComprobante
+            // 
+            this.CmbTipoComprobante.Font = new System.Drawing.Font("Roboto", 10.25F);
+            this.CmbTipoComprobante.ForeColor = System.Drawing.Color.Gray;
+            this.CmbTipoComprobante.FormattingEnabled = true;
+            this.CmbTipoComprobante.Location = new System.Drawing.Point(160, 42);
+            this.CmbTipoComprobante.Name = "CmbTipoComprobante";
+            this.CmbTipoComprobante.Size = new System.Drawing.Size(175, 27);
+            this.CmbTipoComprobante.TabIndex = 273;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(135, 24);
+            this.label4.Location = new System.Drawing.Point(6, 73);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 17);
             this.label4.TabIndex = 270;
@@ -276,9 +299,9 @@
             this.CmbNumeroPiso.Font = new System.Drawing.Font("Roboto", 10.25F);
             this.CmbNumeroPiso.ForeColor = System.Drawing.Color.Gray;
             this.CmbNumeroPiso.FormattingEnabled = true;
-            this.CmbNumeroPiso.Location = new System.Drawing.Point(138, 44);
+            this.CmbNumeroPiso.Location = new System.Drawing.Point(9, 93);
             this.CmbNumeroPiso.Name = "CmbNumeroPiso";
-            this.CmbNumeroPiso.Size = new System.Drawing.Size(109, 27);
+            this.CmbNumeroPiso.Size = new System.Drawing.Size(115, 27);
             this.CmbNumeroPiso.TabIndex = 271;
             this.CmbNumeroPiso.SelectedIndexChanged += new System.EventHandler(this.CmbNumeroPiso_SelectedIndexChanged);
             // 
@@ -295,7 +318,7 @@
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Font = new System.Drawing.Font("Roboto", 10.25F);
             this.groupBox3.ForeColor = System.Drawing.Color.Gray;
-            this.groupBox3.Location = new System.Drawing.Point(12, 142);
+            this.groupBox3.Location = new System.Drawing.Point(12, 200);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(790, 76);
             this.groupBox3.TabIndex = 272;
@@ -410,7 +433,7 @@
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Font = new System.Drawing.Font("Roboto", 10.25F);
             this.groupBox4.ForeColor = System.Drawing.Color.Gray;
-            this.groupBox4.Location = new System.Drawing.Point(12, 233);
+            this.groupBox4.Location = new System.Drawing.Point(12, 281);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(790, 85);
             this.groupBox4.TabIndex = 273;
@@ -470,7 +493,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(30, 547);
+            this.label13.Location = new System.Drawing.Point(30, 595);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(101, 17);
             this.label13.TabIndex = 274;
@@ -481,7 +504,7 @@
             this.TxtTotalLiteral.BackColor = System.Drawing.Color.White;
             this.TxtTotalLiteral.Font = new System.Drawing.Font("Roboto", 10.25F);
             this.TxtTotalLiteral.ForeColor = System.Drawing.Color.Black;
-            this.TxtTotalLiteral.Location = new System.Drawing.Point(137, 543);
+            this.TxtTotalLiteral.Location = new System.Drawing.Point(137, 591);
             this.TxtTotalLiteral.Name = "TxtTotalLiteral";
             this.TxtTotalLiteral.Size = new System.Drawing.Size(440, 26);
             this.TxtTotalLiteral.TabIndex = 276;
@@ -491,7 +514,7 @@
             this.TxtTotalNumerico.BackColor = System.Drawing.Color.White;
             this.TxtTotalNumerico.Font = new System.Drawing.Font("Roboto", 10.25F);
             this.TxtTotalNumerico.ForeColor = System.Drawing.Color.Black;
-            this.TxtTotalNumerico.Location = new System.Drawing.Point(696, 543);
+            this.TxtTotalNumerico.Location = new System.Drawing.Point(696, 591);
             this.TxtTotalNumerico.Name = "TxtTotalNumerico";
             this.TxtTotalNumerico.Size = new System.Drawing.Size(106, 26);
             this.TxtTotalNumerico.TabIndex = 275;
@@ -507,7 +530,7 @@
             this.CANTIDAD,
             this.PRECIO,
             this.IMPORTE});
-            this.DgvPedidosMesa.Location = new System.Drawing.Point(12, 324);
+            this.DgvPedidosMesa.Location = new System.Drawing.Point(12, 372);
             this.DgvPedidosMesa.Name = "DgvPedidosMesa";
             this.DgvPedidosMesa.ReadOnly = true;
             this.DgvPedidosMesa.Size = new System.Drawing.Size(790, 204);
@@ -543,29 +566,12 @@
             this.IMPORTE.Name = "IMPORTE";
             this.IMPORTE.ReadOnly = true;
             // 
-            // BtnRealizarPago
-            // 
-            this.BtnRealizarPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.BtnRealizarPago.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.BtnRealizarPago.FlatAppearance.BorderSize = 0;
-            this.BtnRealizarPago.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.BtnRealizarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRealizarPago.Font = new System.Drawing.Font("Roboto", 10F);
-            this.BtnRealizarPago.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnRealizarPago.Location = new System.Drawing.Point(409, 575);
-            this.BtnRealizarPago.Name = "BtnRealizarPago";
-            this.BtnRealizarPago.Size = new System.Drawing.Size(127, 32);
-            this.BtnRealizarPago.TabIndex = 279;
-            this.BtnRealizarPago.Text = "Realizar Pago";
-            this.BtnRealizarPago.UseVisualStyleBackColor = false;
-            this.BtnRealizarPago.Click += new System.EventHandler(this.BtnRealizarPago_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(650, 547);
+            this.label1.Location = new System.Drawing.Point(650, 595);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 17);
             this.label1.TabIndex = 280;
@@ -573,94 +579,68 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.TxtNumeroBoleta);
-            this.groupBox5.Controls.Add(this.TxtSerieBoleta);
-            this.groupBox5.Controls.Add(this.TxtRucBoleta);
+            this.groupBox5.Controls.Add(this.CmbSerie);
+            this.groupBox5.Controls.Add(this.TxtNumero);
             this.groupBox5.Controls.Add(this.label18);
             this.groupBox5.Controls.Add(this.label16);
-            this.groupBox5.Controls.Add(this.label17);
             this.groupBox5.Font = new System.Drawing.Font("Roboto", 10.25F);
             this.groupBox5.ForeColor = System.Drawing.Color.Gray;
-            this.groupBox5.Location = new System.Drawing.Point(319, 9);
+            this.groupBox5.Location = new System.Drawing.Point(436, 9);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(483, 43);
+            this.groupBox5.Size = new System.Drawing.Size(374, 46);
             this.groupBox5.TabIndex = 290;
             this.groupBox5.TabStop = false;
             // 
-            // TxtNumeroBoleta
+            // CmbSerie
             // 
-            this.TxtNumeroBoleta.BackColor = System.Drawing.Color.Silver;
-            this.TxtNumeroBoleta.Font = new System.Drawing.Font("Roboto", 8.25F);
-            this.TxtNumeroBoleta.ForeColor = System.Drawing.Color.Black;
-            this.TxtNumeroBoleta.Location = new System.Drawing.Point(398, 16);
-            this.TxtNumeroBoleta.Name = "TxtNumeroBoleta";
-            this.TxtNumeroBoleta.Size = new System.Drawing.Size(79, 22);
-            this.TxtNumeroBoleta.TabIndex = 193;
+            this.CmbSerie.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.CmbSerie.ForeColor = System.Drawing.Color.Gray;
+            this.CmbSerie.FormattingEnabled = true;
+            this.CmbSerie.Location = new System.Drawing.Point(68, 16);
+            this.CmbSerie.Name = "CmbSerie";
+            this.CmbSerie.Size = new System.Drawing.Size(100, 23);
+            this.CmbSerie.TabIndex = 258;
             // 
-            // TxtSerieBoleta
+            // TxtNumero
             // 
-            this.TxtSerieBoleta.BackColor = System.Drawing.Color.Silver;
-            this.TxtSerieBoleta.Font = new System.Drawing.Font("Roboto", 8.25F);
-            this.TxtSerieBoleta.ForeColor = System.Drawing.Color.Black;
-            this.TxtSerieBoleta.Location = new System.Drawing.Point(247, 14);
-            this.TxtSerieBoleta.Name = "TxtSerieBoleta";
-            this.TxtSerieBoleta.Size = new System.Drawing.Size(79, 22);
-            this.TxtSerieBoleta.TabIndex = 192;
-            this.TxtSerieBoleta.Text = "B001";
-            // 
-            // TxtRucBoleta
-            // 
-            this.TxtRucBoleta.BackColor = System.Drawing.Color.Silver;
-            this.TxtRucBoleta.Font = new System.Drawing.Font("Roboto", 8.25F);
-            this.TxtRucBoleta.ForeColor = System.Drawing.Color.Black;
-            this.TxtRucBoleta.Location = new System.Drawing.Point(65, 15);
-            this.TxtRucBoleta.Name = "TxtRucBoleta";
-            this.TxtRucBoleta.Size = new System.Drawing.Size(104, 22);
-            this.TxtRucBoleta.TabIndex = 191;
-            this.TxtRucBoleta.Text = "10726555937";
+            this.TxtNumero.BackColor = System.Drawing.Color.Silver;
+            this.TxtNumero.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.TxtNumero.ForeColor = System.Drawing.Color.Black;
+            this.TxtNumero.Location = new System.Drawing.Point(251, 17);
+            this.TxtNumero.Name = "TxtNumero";
+            this.TxtNumero.Size = new System.Drawing.Size(101, 22);
+            this.TxtNumero.TabIndex = 193;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Roboto", 9.25F);
+            this.label18.Font = new System.Drawing.Font("Roboto", 8.25F);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.label18.Location = new System.Drawing.Point(333, 16);
+            this.label18.Location = new System.Drawing.Point(185, 19);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(63, 18);
+            this.label18.Size = new System.Drawing.Size(53, 15);
             this.label18.TabIndex = 181;
             this.label18.Text = "NUMERO";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Roboto", 9.25F);
+            this.label16.Font = new System.Drawing.Font("Roboto", 8.25F);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.label16.Location = new System.Drawing.Point(193, 15);
+            this.label16.Location = new System.Drawing.Point(17, 20);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(45, 18);
+            this.label16.Size = new System.Drawing.Size(36, 15);
             this.label16.TabIndex = 180;
             this.label16.Text = "SERIE";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Roboto", 9.25F);
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.label17.Location = new System.Drawing.Point(6, 16);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(34, 18);
-            this.label17.TabIndex = 179;
-            this.label17.Text = "RUC";
             // 
             // FrmPedidoMesa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(814, 630);
+            this.ClientSize = new System.Drawing.Size(814, 666);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BtnRealizarPago);
             this.Controls.Add(this.DgvPedidosMesa);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.TxtTotalLiteral);
@@ -698,7 +678,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label Codigo;
-        private System.Windows.Forms.TextBox TxtCodigoPedido;
+        private System.Windows.Forms.TextBox TxtIdPedido;
         private System.Windows.Forms.Button BtnNuevo;
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.DateTimePicker DtpFechaPedido;
@@ -727,7 +707,6 @@
         private System.Windows.Forms.TextBox TxtTotalNumerico;
         private System.Windows.Forms.RadioButton RdnEstadoCancelado;
         private System.Windows.Forms.DataGridView DgvPedidosMesa;
-        private System.Windows.Forms.Button BtnRealizarPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDPRODUCTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn CANTIDAD;
@@ -737,11 +716,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox CmbNumeroPiso;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox TxtNumeroBoleta;
-        private System.Windows.Forms.TextBox TxtSerieBoleta;
-        private System.Windows.Forms.TextBox TxtRucBoleta;
+        private System.Windows.Forms.ComboBox CmbSerie;
+        private System.Windows.Forms.TextBox TxtNumero;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox CmbTipoComprobante;
     }
 }

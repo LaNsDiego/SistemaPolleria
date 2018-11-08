@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaPolleria.Entidad
 {
-    class ClsPedido //Es el Tabla Union entre Mesa y Plato
+    public class ClsPedido
     {
         //Id VARCHAR(8) PRIMARY KEY,
         //FechaPedido DATE NOT NULL,

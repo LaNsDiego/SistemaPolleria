@@ -11,7 +11,7 @@ namespace SistemaPolleria.Negocio
 {
     class ClsNDetallePedido
     {
-        public static int Guardar(ClsDetallePedido DetallePedido)
+        public static bool Guardar(ClsDetallePedido DetallePedido)
         {
             string Procedimiento = string.Empty;
             ClsNSQLParametro[] parametros;
@@ -37,12 +37,21 @@ namespace SistemaPolleria.Negocio
                 parametros[3] = new ClsNSQLParametro(DetallePedido.Cantidad, "@Cantidad", SqlDbType.Int);
                 parametros[4] = new ClsNSQLParametro(DetallePedido.Subtotal, "@Subtotal", SqlDbType.Decimal);
             }
-            return Convert.ToInt32(ClsNConexion.EjecutarProcedimiento(Procedimiento, parametros).Tables[0].Rows[0]["IDDetallePedido"].ToString());
+            return ClsNConexion.EjecutarProcedimiento(Procedimiento, parametros) != null;
         }
 
         public static DataTable Listar()
         {
             return ClsNConexion.EjecutarProcedimiento("ListarDetallePedido").Tables[0];
         }
+
+        public static DataTable ObtenerDetallesPedidoPorPedido(string PedidoId)
+        {
+            ClsNSQLParametro[] parametros = new ClsNSQLParametro[1];
+            parametros[0] = new ClsNSQLParametro(PedidoId, "@IdPedido", SqlDbType.VarChar);
+            return ClsNConexion.EjecutarProcedimiento("ListarDetallePedido",parametros).Tables[0];
+        }
+
+        
     }
 }

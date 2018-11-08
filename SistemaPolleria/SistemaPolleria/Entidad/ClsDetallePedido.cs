@@ -29,5 +29,15 @@ namespace SistemaPolleria.Entidad
             Cantidad = cantidad;
             Subtotal = subtotal;
         }
+
+        public ClsDetallePedido(int id, string idPedido, string idProducto, double precioUnitario, int cantidad, double subtotal)
+        {
+            Id = id;
+            IdPedido = idPedido;
+            IdProducto = idProducto;
+            PrecioUnitario = precioUnitario;
+            Cantidad = cantidad;
+            Subtotal = subtotal;
+        }
     }
 }

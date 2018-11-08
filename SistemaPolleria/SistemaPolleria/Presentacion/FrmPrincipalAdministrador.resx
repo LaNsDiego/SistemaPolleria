@@ -118,6 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnListaPedido.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAXklEQVRIS+3SQQrAIAwEwPz/WZW+K91s
+        Y9tDEIQeRHZADEb2EGKyFnc/cbqWz/+J1CyfOu5ZDKh8m72OexYDKui1+wsd+SwvjEVbRAyooKctGsNY
+        tEXEgAp62qLtmF1Tn8N7Vid03QAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="PtbFoto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAa8AAAGvCAYAAADsa1oBAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -6038,13 +6046,10 @@
   </data>
   <data name="BtnPedidoDelivery.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABLklEQVRIS+2UPUrEQBiGo4Js64KdsmBr
-        I55BvMF22nqBFbyCxV7A1tLWSj2Du5WlINgJWiqCGp938k6KjMEkm3IfeOCb+X4mYWeTLemNPM938Rrv
-        cN/bi8OwbbzAL4z84BXuuKw9NG/gOX5gHZ+owzfd9j8Ur+MJvmBT3vAMBx6TQnIFx/iIXXlGPdyaxxaw
-        cYAz7IsHHHt8ecC9Mn3i8QWsV/EYn5TsiHqPirByQIT9hX/ksANhYB3kO1/TkAEvU8hNceh4hJf4jRHF
-        2hu5ZohTxYI44GWK83rtU4yvvYe3eKPYewNUjWrLgYqFlynOR5K7Tfznf8bp1gdE5nhoFSe4vdEBE3wN
-        Vc1Q7cTtzaAh3qJ3rKP9x64KzVse0u/nugrDdIt0g8pbtKQHsuwX4nK+bLeWoYcAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAASElEQVQ4T2MYweD///8GIAzlkg+AhhwA
+        YSiXfDBMDAJqAAUsWCMS/gDF6OK4IwAkiaYYhEk3CBuAaYRyyQfD2yDqZJGhChgYALWgoL1XzFKlAAAA
+        AElFTkSuQmCC
 </value>
   </data>
   <data name="BtnSalirSistema.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

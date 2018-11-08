@@ -6,17 +6,21 @@ using System.Threading.Tasks;
 
 namespace SistemaPolleria.Entidad
 {
-    class ClsCliente
+    public class ClsCliente
     {
-        //Id VARCHAR(8) PRIMARY KEY,
-        //RazonSocial VARCHAR(100) NULL,
-        //Documento VARCHAR(11) NULL,
-        //Telefono VARCHAR(50) NULL,
-        //IdTipoCliente VARCHAR(4) NOT NULL
         public string Id { get; private set; }
         public string RazonSocial { get; private set; }
         public string Documento { get; private set; }
         public string Telefono { get; private set; }
         public string IdTipoCliente { get; private set; }
+
+        public ClsCliente(string id, string razonSocial, string documento, string telefono, string idTipoCliente)
+        {
+            Id = id;
+            RazonSocial = razonSocial;
+            Documento = documento;
+            Telefono = telefono;
+            IdTipoCliente = idTipoCliente;
+        }
     }
 }

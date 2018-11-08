@@ -39,7 +39,7 @@ namespace SistemaPolleria
                 this.Hide();
                 if (IdCargo == 1)
                 {
-                    FrmPrincipalMoso frm = new FrmPrincipalMoso();
+                    FrmPrincipalMoso frm = new FrmPrincipalMoso(Empleado);
                     frm.Show();
                 }
                 else if (IdCargo == 2)

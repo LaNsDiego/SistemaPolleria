@@ -42,6 +42,7 @@
             this.BtnKardex = new System.Windows.Forms.Button();
             this.BtnInsumo = new System.Windows.Forms.Button();
             this.PanelPadre = new System.Windows.Forms.Panel();
+            this.BtnListaPedido = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PtbFoto)).BeginInit();
@@ -50,6 +51,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.panel3.Controls.Add(this.BtnListaPedido);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.BtnCompra);
             this.panel3.Controls.Add(this.BtnPedidoDelivery);
@@ -152,6 +154,7 @@
             this.BtnPedidoDelivery.TabIndex = 4;
             this.BtnPedidoDelivery.Text = "Pedido Delivery";
             this.BtnPedidoDelivery.UseVisualStyleBackColor = false;
+            this.BtnPedidoDelivery.Click += new System.EventHandler(this.BtnPedidoDelivery_Click);
             // 
             // BtnSalirSistema
             // 
@@ -235,6 +238,24 @@
             this.PanelPadre.Size = new System.Drawing.Size(735, 700);
             this.PanelPadre.TabIndex = 5;
             // 
+            // BtnListaPedido
+            // 
+            this.BtnListaPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.BtnListaPedido.FlatAppearance.BorderSize = 0;
+            this.BtnListaPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnListaPedido.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnListaPedido.ForeColor = System.Drawing.Color.White;
+            this.BtnListaPedido.Image = ((System.Drawing.Image)(resources.GetObject("BtnListaPedido.Image")));
+            this.BtnListaPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnListaPedido.Location = new System.Drawing.Point(0, 371);
+            this.BtnListaPedido.Name = "BtnListaPedido";
+            this.BtnListaPedido.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnListaPedido.Size = new System.Drawing.Size(200, 43);
+            this.BtnListaPedido.TabIndex = 7;
+            this.BtnListaPedido.Text = "Lista Pedidos";
+            this.BtnListaPedido.UseVisualStyleBackColor = false;
+            this.BtnListaPedido.Click += new System.EventHandler(this.BtnListaPedido_Click);
+            // 
             // FrmPrincipalAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,5 +292,6 @@
         private System.Windows.Forms.Button BtnInsumo;
         private System.Windows.Forms.Panel PanelPadre;
         private System.Windows.Forms.Label LblApellidoUsuario;
+        private System.Windows.Forms.Button BtnListaPedido;
     }
 }

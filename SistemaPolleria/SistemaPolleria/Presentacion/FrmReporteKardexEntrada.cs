@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace SistemaPolleria.Presentacion
 {
-    public partial class FrmBoleta : Form
+    public partial class FrmReporteKardexEntrada : Form
     {
-        public FrmBoleta()
+        public FrmReporteKardexEntrada()
         {
             InitializeComponent();
+        }
+
+        private void FrmReporteKardexEntrada_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

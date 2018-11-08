@@ -172,7 +172,7 @@ namespace SistemaPolleria.Presentacion
                 ClsDetalleKardex DetalleKardex = new ClsDetalleKardex(
                     KardexId,
                     Fecha,
-                    "02",
+                    "01",
                     TiposComprobanteId[CmbTipoComprobante.SelectedIndex],
                     TxtSerie.Text,
                     TxtNumero.Text,

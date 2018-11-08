@@ -20,7 +20,7 @@ namespace SistemaPolleria.Presentacion
             InitializeComponent();
         }
 
-        private void AbrirFormHijo(object frmHijo)
+        public void AbrirFormHijo(object frmHijo)
         {
             PanelPadre.Controls.Clear();
             Form frm = frmHijo as Form;
@@ -74,6 +74,18 @@ namespace SistemaPolleria.Presentacion
         private void BtnKardex_Click(object sender, EventArgs e)
         {
             FrmKardex frm = new FrmKardex();
+            AbrirFormHijo(frm);
+        }
+
+        private void BtnPedidoDelivery_Click(object sender, EventArgs e)
+        {
+            //FrmPedidoDelivery frm = new FrmPedidoDelivery();
+            //AbrirFormHijo(frm);
+        }
+
+        private void BtnListaPedido_Click(object sender, EventArgs e)
+        {
+            FrmListaPedido frm = new FrmListaPedido();
             AbrirFormHijo(frm);
         }
     }

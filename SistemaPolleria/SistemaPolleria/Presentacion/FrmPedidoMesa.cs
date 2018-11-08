@@ -16,10 +16,11 @@ namespace SistemaPolleria.Presentacion
 {
     public partial class FrmPedidoMesa : Form
     {
-        public string EmpleadoId { get; private set; }
+        private List<string> TiposComprobanteId = new List<string>();
+        public string EmpleadoId { get; private set; } = FrmPrincipalMoso.Empleado.Id;
         public string ProductoId { get; private set; }
         public string MesaId { get; private set; }
-        public string ClienteId { get; private set; }
+        public string ClienteId { get; private set; } = "CL000001";
         //ArrayList Mesas = new ArrayList();
 
         public FrmPedidoMesa()
@@ -36,6 +37,7 @@ namespace SistemaPolleria.Presentacion
             {
                 if (Convert.ToInt32(Mesa["Piso"]) == Convert.ToInt32(CmbNumeroPiso.SelectedItem.ToString()) )
                 {
+                    //Console.WriteLine(Mesa["Id"] +" =>"+Mesa["Piso"] + "==" + CmbNumeroPiso.SelectedItem.ToString());
                     CmbCodigoMesa.Items.Add(Mesa["Id"]);
                 }
             }
@@ -45,7 +47,7 @@ namespace SistemaPolleria.Presentacion
         {
             List<Control> Lista = new List<Control>
             {
-                TxtCodigoPedido,
+                TxtIdPedido,
                 CmbCodigoMesa,
                 CmbNumeroPiso,
                 GpbEstado,
@@ -59,8 +61,7 @@ namespace SistemaPolleria.Presentacion
                 BtnAgregarCarrito,
                 BtnQuitarCarrito,
                 TxtTotalNumerico,
-                BtnGuardar,
-                BtnRealizarPago
+                BtnGuardar
             };
             ClsNUI.AjustarEstadoControles(Lista, disponibilidad);
         }
@@ -179,7 +180,25 @@ namespace SistemaPolleria.Presentacion
 
         private void FrmPedidoMesa_Load(object sender, EventArgs e)
         {
-            MostarMesas();
+            DataTable TiposComprobante = ClsNTipoComprobante.Listar();
+            foreach (DataRow Fila in TiposComprobante.Rows)
+            {
+                TiposComprobanteId.Add(Fila["Id"].ToString());
+                CmbTipoComprobante.Items.Add(Fila["Nombre"]);
+            }
+            CmbTipoComprobante.SelectedIndex = 0;
+
+
+            DataTable Series = ClsNSerie.Listar();
+            foreach (DataRow Fila in Series.Rows)
+            {
+                CmbSerie.Items.Add(Fila["Serie"]);
+            }
+
+            CmbNumeroPiso.Items.Add("1");
+            CmbNumeroPiso.Items.Add("2");
+            CmbNumeroPiso.SelectedIndex = 0;
+
             AjustarControles(false);
         }
 
@@ -195,20 +214,21 @@ namespace SistemaPolleria.Presentacion
                 TxtCantidadCompra,
                 BtnAgregarCarrito,
                 BtnQuitarCarrito,
-                BtnGuardar,
-                BtnRealizarPago
+                BtnGuardar
             };
             ClsNUI.AjustarEstadoControles(Lista, true);
+            TxtIdPedido.Text = ClsNPedido.GenerarId();
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            if (MesaId != null && ClienteId != null && DgvPedidosMesa.Rows.Count > 0)
+            
+            if (MesaId != null && ClienteId != null && DgvPedidosMesa.Rows.Count > 0 && TxtNumero.Text != null && CmbSerie.SelectedIndex > -1)
             {
                 int Estado = RdnEstadoAtendido.Checked ? 1 : RdnEstadoEspera.Checked ? 2 : 3;
                 ClsPedido Pedido = new ClsPedido
                 (
-                    TxtCodigoPedido.Text,
+                    TxtIdPedido.Text,
                     ClienteId,
                     EmpleadoId,
                     false,// FALSE indica pedido mesa
@@ -216,13 +236,13 @@ namespace SistemaPolleria.Presentacion
                     Convert.ToDouble(TxtTotalNumerico.Text),
                     Estado
                 );
-                string PedidoId = ClsNPedido.Guardar(Pedido);
+                ClsNPedido.Guardar(Pedido,true);
 
                 foreach (DataGridViewRow Fila in DgvPedidosMesa.Rows)
                 {
                     ClsDetallePedido Detalle = new ClsDetallePedido
                         (
-                            PedidoId,
+                            TxtIdPedido.Text,
                             Fila.Cells[0].Value.ToString(),
                             Convert.ToDouble(Fila.Cells[3].Value),
                             Convert.ToInt32(Fila.Cells[2].Value),
@@ -231,6 +251,27 @@ namespace SistemaPolleria.Presentacion
                     ClsNDetallePedido.Guardar(Detalle);
 
                     DataTable TablaDetalleProducto = ClsNDetalleProducto.ObtenerPorProducto(Detalle.IdProducto);
+                    if (CmbTipoComprobante.SelectedIndex == 0)
+                    {
+                        ClsBoleta Boleta = new ClsBoleta(
+                            CmbSerie.SelectedItem.ToString(),
+                            TxtNumero.Text,
+                            Convert.ToDateTime(DtpFechaPedido.Text),
+                            TxtIdPedido.Text
+                            );
+                        ClsNInsumo.CrearBoleta(Boleta);
+                    }
+                    else
+                    {
+                        ClsFactura Factura = new ClsFactura(
+                            CmbSerie.SelectedItem.ToString(),
+                            TxtNumero.Text,
+                            Convert.ToDateTime(DtpFechaPedido.Text),
+                            TxtIdPedido.Text,
+                            ("GR" + TxtNumero.Text)
+                            );
+                        ClsNInsumo.CrearFactura(Factura);
+                    }
                     foreach (DataRow FilaDetalleProducto in TablaDetalleProducto.Rows)
                     {
                         ClsDetalleProducto DetalleProducto = new ClsDetalleProducto(
@@ -238,7 +279,19 @@ namespace SistemaPolleria.Presentacion
                             FilaDetalleProducto["IdProducto"].ToString(),
                             Convert.ToDouble(FilaDetalleProducto["Cantidad"])
                             );
-                        ClsNInsumo.Salida(DetalleProducto);
+
+
+                        if (CmbTipoComprobante.SelectedIndex == 0) {
+                            ClsNInsumo.SalidaBoleta(DetalleProducto,CmbSerie.SelectedItem.ToString(),TxtNumero.Text);
+                        }
+                        else
+                        {
+                            ClsNInsumo.SalidaFactura(DetalleProducto, CmbSerie.SelectedItem.ToString(), TxtNumero.Text);
+                        }
+
+                            
+                            
+
                     }
                     
                 }
@@ -259,9 +312,9 @@ namespace SistemaPolleria.Presentacion
             MostarMesas();
         }
 
-        private void BtnRealizarPago_Click(object sender, EventArgs e)
+        private void CmbCodigoMesa_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            MesaId = CmbCodigoMesa.SelectedItem.ToString();
         }
     }
 }

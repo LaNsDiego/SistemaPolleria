@@ -11,12 +11,12 @@ namespace SistemaPolleria.Negocio
 {
     class ClsNPedido
     {
-        public static string Guardar(ClsPedido Pedido)
+        public static void Guardar(ClsPedido Pedido,bool EsNuevo)
         {
             string Procedimiento = string.Empty;
             ClsNSQLParametro[] parametros;
 
-            if (Pedido.Id != string.Empty)
+            if (!EsNuevo)
             {
                 Procedimiento = "ActualizarPedido";
                 parametros = new ClsNSQLParametro[7];
@@ -40,7 +40,8 @@ namespace SistemaPolleria.Negocio
                 parametros[5] = new ClsNSQLParametro(Pedido.Total, "@Total", SqlDbType.Decimal);
                 parametros[6] = new ClsNSQLParametro(Pedido.Estado, "@Estado", SqlDbType.Int);
             }
-            return ClsNConexion.EjecutarProcedimiento(Procedimiento, parametros).Tables[0].Rows[0]["IdPedido"].ToString();
+            ClsNConexion.EjecutarProcedimiento(Procedimiento, parametros);
+
         }
 
         public static DataTable Listar()
@@ -53,13 +54,12 @@ namespace SistemaPolleria.Negocio
             return ClsNConexion.EjecutarProcedimiento("GenerarIdPedido").Tables[0].Rows[0]["Id"].ToString();
         }
 
-        //public static bool AnularBoleta(int Id)
-        //{
-        //    ClsNSQLParametro[] parametros = new ClsNSQLParametro[2];
-        //    parametros[0] = new ClsNSQLParametro(Id,"@id" , SqlDbType.Int);
-        //    parametros[1] = new ClsNSQLParametro(0, "@estado", SqlDbType.Bit);
-        //    return ClsNConexion.EjecutarProcedimiento("SP_ANULAR_PEDIDO", parametros) != null;
-        //}
+        public static DataTable Obtener(string Id)
+        {
+            ClsNSQLParametro[] parametros = new ClsNSQLParametro[1];
+            parametros[0] = new ClsNSQLParametro(Id, "@Id", SqlDbType.VarChar);
+            return ClsNConexion.EjecutarProcedimiento("ObtenerPedido", parametros).Tables[0];
+        }
 
 
         //public static DataTable BuscarEntreDosFechas(DateTime FechaInicio , DateTime FechaFinal)

@@ -50,5 +50,13 @@ namespace SistemaPolleria.Negocio
             parametros[0] = new ClsNSQLParametro(Id, "@Documento", SqlDbType.VarChar);
             return ClsNConexion.EjecutarProcedimiento("BuscarClientePorDocumento", parametros).Tables[0];
         }
+
+
+        public static string GenerarId()
+        {
+            return ClsNConexion.EjecutarProcedimiento("GenerarIdCliente").Tables[0].Rows[0]["Id"].ToString();
+        }
+
+        
     }
 }

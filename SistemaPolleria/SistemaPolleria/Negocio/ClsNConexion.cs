@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using SistemaPolleria.Ayuda;
+using System.Data.OleDb;
 
 namespace SistemaPolleria.Negocio
 {
     public abstract class ClsNConexion
     {
+        //private static readonly string conex = "Server=AEPIS28;Database=POLLERIA;Integrated Security=true";
         private static readonly string conex = "Server=.\\SQLEXPRESS2017;Database=POLLERIA;Integrated Security=true";
         private static SqlConnection conexion = new SqlConnection(conex);
         private ClsNConexion()
