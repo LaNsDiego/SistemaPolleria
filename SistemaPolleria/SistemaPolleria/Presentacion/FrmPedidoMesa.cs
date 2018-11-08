@@ -284,8 +284,8 @@ namespace SistemaPolleria.Presentacion
                             CmbSerie.SelectedItem.ToString(),
                             TxtNumero.Text,
                             Convert.ToDateTime(DtpFechaPedido.Text),
-                            TxtIdPedido.Text,
-                            ("GR" + TxtNumero.Text)
+                            ("GR" + TxtNumero.Text),
+                            TxtIdPedido.Text
                             );
                         ClsNInsumo.CrearFactura(Factura);
                     }
