@@ -116,6 +116,12 @@
     <Compile Include="Presentacion\FrmListaPedido.Designer.cs">
       <DependentUpon>FrmListaPedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FrmReporteCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmReporteCompra.Designer.cs">
+      <DependentUpon>FrmReporteCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmReporteKardexEntrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,12 @@
     <Compile Include="Presentacion\FrmReporteKardexSalida.Designer.cs">
       <DependentUpon>FrmReporteKardexSalida.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FrmReportVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmReportVenta.Designer.cs">
+      <DependentUpon>FrmReportVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmListaPedido.resx">
       <DependentUpon>FrmListaPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmReporteCompra.resx">
+      <DependentUpon>FrmReporteCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmReporteKardexEntrada.resx">
       <DependentUpon>FrmReporteKardexEntrada.cs</DependentUpon>
@@ -275,6 +290,9 @@
     <EmbeddedResource Include="Presentacion\FrmReporteKardexSalida.resx">
       <DependentUpon>FrmReporteKardexSalida.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmReportVenta.resx">
+      <DependentUpon>FrmReportVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,8 +305,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\ReporteCompras.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteEntradas.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteSalidas.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteVenta.rdlc" />
     <None Include="packages.config" />
     <None Include="POLLERIADataSet.xsc">
       <DependentUpon>POLLERIADataSet.xsd</DependentUpon>

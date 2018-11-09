@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipalAdministrador));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.BtnReporteVentas = new System.Windows.Forms.Button();
+            this.BtnInventario = new System.Windows.Forms.Button();
+            this.BtnAsistencia = new System.Windows.Forms.Button();
+            this.BtnPlanilla = new System.Windows.Forms.Button();
             this.BtnKardexSalida = new System.Windows.Forms.Button();
             this.BtnReporteKardexEntrada = new System.Windows.Forms.Button();
             this.BtnListaPedido = new System.Windows.Forms.Button();
@@ -39,15 +43,12 @@
             this.LblCargoUsuario = new System.Windows.Forms.Label();
             this.PtbFoto = new System.Windows.Forms.PictureBox();
             this.BtnCompra = new System.Windows.Forms.Button();
-            this.BtnPedidoDelivery = new System.Windows.Forms.Button();
             this.BtnSalirSistema = new System.Windows.Forms.Button();
             this.BtnProducto = new System.Windows.Forms.Button();
             this.BtnKardex = new System.Windows.Forms.Button();
             this.BtnInsumo = new System.Windows.Forms.Button();
             this.PanelPadre = new System.Windows.Forms.Panel();
-            this.BtnPlanilla = new System.Windows.Forms.Button();
-            this.BtnAsistencia = new System.Windows.Forms.Button();
-            this.BtnInventario = new System.Windows.Forms.Button();
+            this.BtnReporteCompra = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PtbFoto)).BeginInit();
@@ -56,6 +57,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.panel3.Controls.Add(this.BtnReporteCompra);
+            this.panel3.Controls.Add(this.BtnReporteVentas);
             this.panel3.Controls.Add(this.BtnInventario);
             this.panel3.Controls.Add(this.BtnAsistencia);
             this.panel3.Controls.Add(this.BtnPlanilla);
@@ -64,7 +67,6 @@
             this.panel3.Controls.Add(this.BtnListaPedido);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.BtnCompra);
-            this.panel3.Controls.Add(this.BtnPedidoDelivery);
             this.panel3.Controls.Add(this.BtnSalirSistema);
             this.panel3.Controls.Add(this.BtnProducto);
             this.panel3.Controls.Add(this.BtnKardex);
@@ -72,8 +74,79 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 700);
+            this.panel3.Size = new System.Drawing.Size(200, 788);
             this.panel3.TabIndex = 4;
+            // 
+            // BtnReporteVentas
+            // 
+            this.BtnReporteVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.BtnReporteVentas.FlatAppearance.BorderSize = 0;
+            this.BtnReporteVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnReporteVentas.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReporteVentas.ForeColor = System.Drawing.Color.White;
+            this.BtnReporteVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnReporteVentas.Location = new System.Drawing.Point(0, 594);
+            this.BtnReporteVentas.Name = "BtnReporteVentas";
+            this.BtnReporteVentas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnReporteVentas.Size = new System.Drawing.Size(200, 43);
+            this.BtnReporteVentas.TabIndex = 13;
+            this.BtnReporteVentas.Text = "Reporte Ventas";
+            this.BtnReporteVentas.UseVisualStyleBackColor = false;
+            this.BtnReporteVentas.Click += new System.EventHandler(this.BtnReporteVentas_Click);
+            // 
+            // BtnInventario
+            // 
+            this.BtnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.BtnInventario.FlatAppearance.BorderSize = 0;
+            this.BtnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnInventario.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnInventario.ForeColor = System.Drawing.Color.White;
+            this.BtnInventario.Image = ((System.Drawing.Image)(resources.GetObject("BtnInventario.Image")));
+            this.BtnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnInventario.Location = new System.Drawing.Point(0, 442);
+            this.BtnInventario.Name = "BtnInventario";
+            this.BtnInventario.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnInventario.Size = new System.Drawing.Size(200, 43);
+            this.BtnInventario.TabIndex = 12;
+            this.BtnInventario.Text = "Inventario";
+            this.BtnInventario.UseVisualStyleBackColor = false;
+            this.BtnInventario.Click += new System.EventHandler(this.BtnInventario_Click);
+            // 
+            // BtnAsistencia
+            // 
+            this.BtnAsistencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.BtnAsistencia.FlatAppearance.BorderSize = 0;
+            this.BtnAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAsistencia.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAsistencia.ForeColor = System.Drawing.Color.White;
+            this.BtnAsistencia.Image = ((System.Drawing.Image)(resources.GetObject("BtnAsistencia.Image")));
+            this.BtnAsistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAsistencia.Location = new System.Drawing.Point(-3, 393);
+            this.BtnAsistencia.Name = "BtnAsistencia";
+            this.BtnAsistencia.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnAsistencia.Size = new System.Drawing.Size(200, 43);
+            this.BtnAsistencia.TabIndex = 11;
+            this.BtnAsistencia.Text = "Asistencia";
+            this.BtnAsistencia.UseVisualStyleBackColor = false;
+            this.BtnAsistencia.Click += new System.EventHandler(this.BtnAsistencia_Click);
+            // 
+            // BtnPlanilla
+            // 
+            this.BtnPlanilla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.BtnPlanilla.FlatAppearance.BorderSize = 0;
+            this.BtnPlanilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPlanilla.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPlanilla.ForeColor = System.Drawing.Color.White;
+            this.BtnPlanilla.Image = ((System.Drawing.Image)(resources.GetObject("BtnPlanilla.Image")));
+            this.BtnPlanilla.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnPlanilla.Location = new System.Drawing.Point(0, 344);
+            this.BtnPlanilla.Name = "BtnPlanilla";
+            this.BtnPlanilla.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnPlanilla.Size = new System.Drawing.Size(200, 43);
+            this.BtnPlanilla.TabIndex = 10;
+            this.BtnPlanilla.Text = "Planilla";
+            this.BtnPlanilla.UseVisualStyleBackColor = false;
+            this.BtnPlanilla.Click += new System.EventHandler(this.BtnPlanilla_Click);
             // 
             // BtnKardexSalida
             // 
@@ -83,7 +156,7 @@
             this.BtnKardexSalida.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnKardexSalida.ForeColor = System.Drawing.Color.White;
             this.BtnKardexSalida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnKardexSalida.Location = new System.Drawing.Point(0, 621);
+            this.BtnKardexSalida.Location = new System.Drawing.Point(0, 545);
             this.BtnKardexSalida.Name = "BtnKardexSalida";
             this.BtnKardexSalida.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnKardexSalida.Size = new System.Drawing.Size(200, 43);
@@ -100,7 +173,7 @@
             this.BtnReporteKardexEntrada.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnReporteKardexEntrada.ForeColor = System.Drawing.Color.White;
             this.BtnReporteKardexEntrada.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnReporteKardexEntrada.Location = new System.Drawing.Point(0, 572);
+            this.BtnReporteKardexEntrada.Location = new System.Drawing.Point(0, 496);
             this.BtnReporteKardexEntrada.Name = "BtnReporteKardexEntrada";
             this.BtnReporteKardexEntrada.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnReporteKardexEntrada.Size = new System.Drawing.Size(200, 43);
@@ -118,7 +191,7 @@
             this.BtnListaPedido.ForeColor = System.Drawing.Color.White;
             this.BtnListaPedido.Image = ((System.Drawing.Image)(resources.GetObject("BtnListaPedido.Image")));
             this.BtnListaPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnListaPedido.Location = new System.Drawing.Point(0, 371);
+            this.BtnListaPedido.Location = new System.Drawing.Point(0, 295);
             this.BtnListaPedido.Name = "BtnListaPedido";
             this.BtnListaPedido.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnListaPedido.Size = new System.Drawing.Size(200, 43);
@@ -136,7 +209,7 @@
             this.panel2.Controls.Add(this.PtbFoto);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 120);
+            this.panel2.Size = new System.Drawing.Size(200, 97);
             this.panel2.TabIndex = 6;
             // 
             // LblApellidoUsuario
@@ -191,7 +264,7 @@
             this.BtnCompra.ForeColor = System.Drawing.Color.White;
             this.BtnCompra.Image = ((System.Drawing.Image)(resources.GetObject("BtnCompra.Image")));
             this.BtnCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCompra.Location = new System.Drawing.Point(0, 224);
+            this.BtnCompra.Location = new System.Drawing.Point(0, 148);
             this.BtnCompra.Name = "BtnCompra";
             this.BtnCompra.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnCompra.Size = new System.Drawing.Size(200, 43);
@@ -199,24 +272,6 @@
             this.BtnCompra.Text = "Compras";
             this.BtnCompra.UseVisualStyleBackColor = false;
             this.BtnCompra.Click += new System.EventHandler(this.BtnCompra_Click);
-            // 
-            // BtnPedidoDelivery
-            // 
-            this.BtnPedidoDelivery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.BtnPedidoDelivery.FlatAppearance.BorderSize = 0;
-            this.BtnPedidoDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPedidoDelivery.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPedidoDelivery.ForeColor = System.Drawing.Color.White;
-            this.BtnPedidoDelivery.Image = ((System.Drawing.Image)(resources.GetObject("BtnPedidoDelivery.Image")));
-            this.BtnPedidoDelivery.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnPedidoDelivery.Location = new System.Drawing.Point(0, 126);
-            this.BtnPedidoDelivery.Name = "BtnPedidoDelivery";
-            this.BtnPedidoDelivery.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnPedidoDelivery.Size = new System.Drawing.Size(200, 43);
-            this.BtnPedidoDelivery.TabIndex = 4;
-            this.BtnPedidoDelivery.Text = "Pedido Delivery";
-            this.BtnPedidoDelivery.UseVisualStyleBackColor = false;
-            this.BtnPedidoDelivery.Click += new System.EventHandler(this.BtnPedidoDelivery_Click);
             // 
             // BtnSalirSistema
             // 
@@ -228,7 +283,7 @@
             this.BtnSalirSistema.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BtnSalirSistema.Image = ((System.Drawing.Image)(resources.GetObject("BtnSalirSistema.Image")));
             this.BtnSalirSistema.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnSalirSistema.Location = new System.Drawing.Point(0, 652);
+            this.BtnSalirSistema.Location = new System.Drawing.Point(0, 740);
             this.BtnSalirSistema.Name = "BtnSalirSistema";
             this.BtnSalirSistema.Padding = new System.Windows.Forms.Padding(20, 0, 30, 0);
             this.BtnSalirSistema.Size = new System.Drawing.Size(200, 48);
@@ -247,7 +302,7 @@
             this.BtnProducto.ForeColor = System.Drawing.Color.White;
             this.BtnProducto.Image = ((System.Drawing.Image)(resources.GetObject("BtnProducto.Image")));
             this.BtnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnProducto.Location = new System.Drawing.Point(0, 322);
+            this.BtnProducto.Location = new System.Drawing.Point(0, 246);
             this.BtnProducto.Name = "BtnProducto";
             this.BtnProducto.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnProducto.Size = new System.Drawing.Size(200, 43);
@@ -265,7 +320,7 @@
             this.BtnKardex.ForeColor = System.Drawing.Color.White;
             this.BtnKardex.Image = ((System.Drawing.Image)(resources.GetObject("BtnKardex.Image")));
             this.BtnKardex.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnKardex.Location = new System.Drawing.Point(0, 273);
+            this.BtnKardex.Location = new System.Drawing.Point(0, 197);
             this.BtnKardex.Name = "BtnKardex";
             this.BtnKardex.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnKardex.Size = new System.Drawing.Size(200, 43);
@@ -283,7 +338,7 @@
             this.BtnInsumo.ForeColor = System.Drawing.Color.White;
             this.BtnInsumo.Image = ((System.Drawing.Image)(resources.GetObject("BtnInsumo.Image")));
             this.BtnInsumo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnInsumo.Location = new System.Drawing.Point(0, 175);
+            this.BtnInsumo.Location = new System.Drawing.Point(0, 99);
             this.BtnInsumo.Name = "BtnInsumo";
             this.BtnInsumo.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.BtnInsumo.Size = new System.Drawing.Size(200, 43);
@@ -297,68 +352,31 @@
             this.PanelPadre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelPadre.Location = new System.Drawing.Point(200, 0);
             this.PanelPadre.Name = "PanelPadre";
-            this.PanelPadre.Size = new System.Drawing.Size(735, 700);
+            this.PanelPadre.Size = new System.Drawing.Size(735, 788);
             this.PanelPadre.TabIndex = 5;
             // 
-            // BtnPlanilla
+            // BtnReporteCompra
             // 
-            this.BtnPlanilla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.BtnPlanilla.FlatAppearance.BorderSize = 0;
-            this.BtnPlanilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPlanilla.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPlanilla.ForeColor = System.Drawing.Color.White;
-            this.BtnPlanilla.Image = ((System.Drawing.Image)(resources.GetObject("BtnPlanilla.Image")));
-            this.BtnPlanilla.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnPlanilla.Location = new System.Drawing.Point(0, 420);
-            this.BtnPlanilla.Name = "BtnPlanilla";
-            this.BtnPlanilla.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnPlanilla.Size = new System.Drawing.Size(200, 43);
-            this.BtnPlanilla.TabIndex = 10;
-            this.BtnPlanilla.Text = "Planilla";
-            this.BtnPlanilla.UseVisualStyleBackColor = false;
-            this.BtnPlanilla.Click += new System.EventHandler(this.BtnPlanilla_Click);
-            // 
-            // BtnAsistencia
-            // 
-            this.BtnAsistencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.BtnAsistencia.FlatAppearance.BorderSize = 0;
-            this.BtnAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAsistencia.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAsistencia.ForeColor = System.Drawing.Color.White;
-            this.BtnAsistencia.Image = ((System.Drawing.Image)(resources.GetObject("BtnAsistencia.Image")));
-            this.BtnAsistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAsistencia.Location = new System.Drawing.Point(-3, 469);
-            this.BtnAsistencia.Name = "BtnAsistencia";
-            this.BtnAsistencia.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnAsistencia.Size = new System.Drawing.Size(200, 43);
-            this.BtnAsistencia.TabIndex = 11;
-            this.BtnAsistencia.Text = "Asistencia";
-            this.BtnAsistencia.UseVisualStyleBackColor = false;
-            this.BtnAsistencia.Click += new System.EventHandler(this.BtnAsistencia_Click);
-            // 
-            // BtnInventario
-            // 
-            this.BtnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.BtnInventario.FlatAppearance.BorderSize = 0;
-            this.BtnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnInventario.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnInventario.ForeColor = System.Drawing.Color.White;
-            this.BtnInventario.Image = ((System.Drawing.Image)(resources.GetObject("BtnInventario.Image")));
-            this.BtnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnInventario.Location = new System.Drawing.Point(0, 518);
-            this.BtnInventario.Name = "BtnInventario";
-            this.BtnInventario.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnInventario.Size = new System.Drawing.Size(200, 43);
-            this.BtnInventario.TabIndex = 12;
-            this.BtnInventario.Text = "Inventario";
-            this.BtnInventario.UseVisualStyleBackColor = false;
-            this.BtnInventario.Click += new System.EventHandler(this.BtnInventario_Click);
+            this.BtnReporteCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.BtnReporteCompra.FlatAppearance.BorderSize = 0;
+            this.BtnReporteCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnReporteCompra.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReporteCompra.ForeColor = System.Drawing.Color.White;
+            this.BtnReporteCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnReporteCompra.Location = new System.Drawing.Point(0, 643);
+            this.BtnReporteCompra.Name = "BtnReporteCompra";
+            this.BtnReporteCompra.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnReporteCompra.Size = new System.Drawing.Size(200, 43);
+            this.BtnReporteCompra.TabIndex = 14;
+            this.BtnReporteCompra.Text = "Reporte Compras";
+            this.BtnReporteCompra.UseVisualStyleBackColor = false;
+            this.BtnReporteCompra.Click += new System.EventHandler(this.BtnReporteCompra_Click);
             // 
             // FrmPrincipalAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 700);
+            this.ClientSize = new System.Drawing.Size(935, 788);
             this.Controls.Add(this.PanelPadre);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -383,7 +401,6 @@
         private System.Windows.Forms.Label LblCargoUsuario;
         private System.Windows.Forms.PictureBox PtbFoto;
         private System.Windows.Forms.Button BtnCompra;
-        private System.Windows.Forms.Button BtnPedidoDelivery;
         private System.Windows.Forms.Button BtnSalirSistema;
         private System.Windows.Forms.Button BtnProducto;
         private System.Windows.Forms.Button BtnKardex;
@@ -396,5 +413,7 @@
         private System.Windows.Forms.Button BtnInventario;
         private System.Windows.Forms.Button BtnAsistencia;
         private System.Windows.Forms.Button BtnPlanilla;
+        private System.Windows.Forms.Button BtnReporteVentas;
+        private System.Windows.Forms.Button BtnReporteCompra;
     }
 }

@@ -118,5 +118,17 @@ namespace SistemaPolleria.Presentacion
             FrmInventario frm = new FrmInventario();
             AbrirFormHijo(frm);
         }
+
+        private void BtnReporteVentas_Click(object sender, EventArgs e)
+        {
+            FrmReportVenta frm = new FrmReportVenta();
+            AbrirFormHijo(frm);
+        }
+
+        private void BtnReporteCompra_Click(object sender, EventArgs e)
+        {
+            FrmReporteCompra frm = new FrmReporteCompra();
+            AbrirFormHijo(frm);
+        }
     }
 }
