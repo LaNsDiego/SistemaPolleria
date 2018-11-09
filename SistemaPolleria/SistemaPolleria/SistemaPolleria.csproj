@@ -308,7 +308,7 @@
     <EmbeddedResource Include="Reportes\ReporteCompras.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteEntradas.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteSalidas.rdlc" />
-    <EmbeddedResource Include="Reportes\ReporteVenta.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteVentas.rdlc" />
     <None Include="packages.config" />
     <None Include="POLLERIADataSet.xsc">
       <DependentUpon>POLLERIADataSet.xsd</DependentUpon>

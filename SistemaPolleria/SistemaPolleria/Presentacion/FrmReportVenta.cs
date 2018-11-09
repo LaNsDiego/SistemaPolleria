@@ -25,6 +25,8 @@ namespace SistemaPolleria.Presentacion
 
         private void BtnBuscarPorFechas_Click(object sender, EventArgs e)
         {
+            //POLLERIADataSetTableAdapters.ReporteVentasTableAdapter Adaptador = new POLLERIADataSetTableAdapters.ReporteVentasTableAdapter();
+
             reporteVentasTableAdapter.Fill(
                 pOLLERIADataSet.ReporteVentas,
                 Convert.ToDateTime(DtpFechaInicio.Text),
@@ -32,11 +34,11 @@ namespace SistemaPolleria.Presentacion
                 );
 
 
-            totalVentaTableAdapter.Fill(
-                pOLLERIADataSet.TotalVenta,
-                Convert.ToDateTime(DtpFechaInicio.Text),
-                Convert.ToDateTime(DtpFechaFinal.Text)
-                );
+            //totalVentaTableAdapter.Fill(
+            //    pOLLERIADataSet.TotalVenta,
+            //    Convert.ToDateTime(DtpFechaInicio.Text),
+            //    Convert.ToDateTime(DtpFechaFinal.Text)
+            //    );
 
             this.reportViewer1.RefreshReport();
         }

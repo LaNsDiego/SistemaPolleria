@@ -32,7 +32,7 @@ namespace SistemaPolleria.Presentacion
                 TxtObservacion,
                 TxtSerie,
                 TxtNumero,
-                DtpFecha,
+                
                 TxtDocumento,
                 TxtRazonSocialEmpleado,
                 TxtCodigoProveedor,

@@ -39,6 +39,7 @@
             this.DtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TotalSalidasAgrupadoPorInsumoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pOLLERIADataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pOLLERIADataSetBindingSource)).BeginInit();
@@ -60,10 +61,10 @@
             reportDataSource1.Value = this.TotalSalidasAgrupadoPorInsumoBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "SistemaPolleria.Reportes.ReporteSalidas.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(48, 90);
+            this.reportViewer1.Location = new System.Drawing.Point(38, 125);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(643, 406);
+            this.reportViewer1.Size = new System.Drawing.Size(643, 388);
             this.reportViewer1.TabIndex = 0;
             // 
             // pOLLERIADataSetBindingSource
@@ -78,7 +79,7 @@
             this.BtnBuscarPorFechas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscarPorFechas.Font = new System.Drawing.Font("Roboto", 11.25F);
             this.BtnBuscarPorFechas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnBuscarPorFechas.Location = new System.Drawing.Point(509, 33);
+            this.BtnBuscarPorFechas.Location = new System.Drawing.Point(499, 68);
             this.BtnBuscarPorFechas.Name = "BtnBuscarPorFechas";
             this.BtnBuscarPorFechas.Size = new System.Drawing.Size(182, 44);
             this.BtnBuscarPorFechas.TabIndex = 5;
@@ -88,14 +89,14 @@
             // 
             // DtpFechaFinal
             // 
-            this.DtpFechaFinal.Location = new System.Drawing.Point(264, 44);
+            this.DtpFechaFinal.Location = new System.Drawing.Point(254, 79);
             this.DtpFechaFinal.Name = "DtpFechaFinal";
             this.DtpFechaFinal.Size = new System.Drawing.Size(200, 20);
             this.DtpFechaFinal.TabIndex = 4;
             // 
             // DtpFechaInicio
             // 
-            this.DtpFechaInicio.Location = new System.Drawing.Point(48, 44);
+            this.DtpFechaInicio.Location = new System.Drawing.Point(38, 79);
             this.DtpFechaInicio.Name = "DtpFechaInicio";
             this.DtpFechaInicio.Size = new System.Drawing.Size(200, 20);
             this.DtpFechaInicio.TabIndex = 3;
@@ -105,7 +106,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Roboto", 10.25F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.label6.Location = new System.Drawing.Point(44, 22);
+            this.label6.Location = new System.Drawing.Point(34, 57);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 19);
             this.label6.TabIndex = 252;
@@ -116,17 +117,29 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 10.25F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.label1.Location = new System.Drawing.Point(260, 22);
+            this.label1.Location = new System.Drawing.Point(250, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 19);
             this.label1.TabIndex = 253;
             this.label1.Text = "Hasta";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto", 14.25F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.label2.Location = new System.Drawing.Point(33, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(211, 25);
+            this.label2.TabIndex = 260;
+            this.label2.Text = "REPORTE  DE SALIDAS";
             // 
             // FrmReporteKardexSalida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 525);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnBuscarPorFechas);
@@ -156,5 +169,6 @@
         private System.Windows.Forms.DateTimePicker DtpFechaInicio;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
